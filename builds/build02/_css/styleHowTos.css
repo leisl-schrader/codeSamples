@@ -1,0 +1,242 @@
+/* Style How To page styles */
+
+#content.styleHowTos {
+	
+	width: 805px;
+	margin-left: 30px;
+	border-top-color: #7888b8;
+}
+
+#content_styleHowTos {
+	
+	border-top: 4px solid #7888b8;
+	margin-top: 2px;
+	min-height: 1150px;
+	padding-bottom: 30px;
+}
+
+#content_styleHowTos > p {
+	
+	width: 645px;
+	font: 16px 'Bodoni Regular', Georgia, "Times New Roman", serif;
+}
+
+nav#styles {
+	
+	border-bottom: 1px solid #00a482;
+	margin-bottom: 2px;
+	padding-bottom: 20px;
+}
+
+nav#styles div {
+	
+	float: left;
+	width: 140px;
+	height: 135px;
+	cursor: pointer;
+	behavior: url('_css/PIE.php');
+}
+
+nav#styles div:hover {
+	
+	opacity: 0.5;
+	filter: Alpha(opacity=50);
+}
+
+nav#styles div.active {
+	
+	-webkit-box-shadow: inset 1px 1px 0px 10px #7888b8);
+	-moz-box-shadow: inset 1px 1px 0px 10px #7888b8);
+	box-shadow: inset 1px 1px 0px 10px #7888b8;
+	behavior: url('_css/PIE.php'); 
+}
+
+nav#styles #thumb_01 {
+	
+	background-image: url("../_img/styleHowTos/thumb_01.jpg");
+}
+
+nav#styles #thumb_02 {
+	
+	background-image: url("../_img/styleHowTos/thumb_02.jpg");
+}
+
+nav#styles #thumb_03 {
+	
+	background-image: url("../_img/styleHowTos/thumb_03.jpg");
+}
+
+nav#styles #thumb_04 {
+	
+	background-image: url("../_img/styleHowTos/thumb_04.jpg");
+}
+
+/*nav#styles #thumb_05 {
+	
+	background-image: url("../_img/styleHowTos/thumb_05.jpg");
+}*/
+
+nav#styles #thumb_06 {
+	
+	background-image: url("../_img/styleHowTos/thumb_06.jpg");
+}
+
+nav#styles #thumb_07 {
+	
+	background-image: url("../_img/styleHowTos/thumb_07.jpg");
+}
+
+/*nav#styles #thumb_08 {
+	
+	background-image: url("../_img/styleHowTos/thumb_08.jpg");
+}
+
+nav#styles #thumb_09 {
+	
+	background-image: url("../_img/styleHowTos/thumb_09.jpg");
+}
+
+nav#styles #thumb_10 {
+	
+	background-image: url("../_img/styleHowTos/thumb_10.jpg");
+}*/
+
+.styleContainer {
+	
+	border-top: 3px solid #00a482;
+}
+
+.stylePhoto {
+	
+	float: left;
+	text-align: center;
+	width: 422px;
+}
+
+.stylePhoto img {
+	
+	margin-top: 5px;
+}
+
+.styleInstructions {
+	
+	float: left;
+	width: 310px;
+	margin-left: 25px;
+}
+
+.styleInstructions header {
+	
+	position: relative;
+	left: -40px;
+	width: 365px;
+	height: 114px;
+	border-bottom: 2px solid #000;
+}
+
+.styleInstructions header img {
+	
+	position: absolute;
+	top: 10px;
+	left: 30px;
+}
+
+.styleInstructions header p {
+	
+	position: absolute;
+	top: 10px;
+	left: 130px;
+	width: 100px;
+	font-size: 10px;
+	line-height: 120%;
+}
+
+.styleInstructions header h2 {
+	
+	position: absolute;
+	top: 60px;
+	left: 130px;
+	width: 250px;
+	font: 30px 'Bodoni Italic';
+	text-transform: none;
+}
+
+.styleInstructions ol {
+	
+	list-style-type: none;
+	margin: -35px 0 60px 0;
+	font: 45px 'Bodoni Italic', Georgia, "Times New Roman", serif;
+	text-align: right;
+	color: #7888b8;
+}
+
+.styleInstructions ol > li {
+  counter-increment: customlistcounter;
+	margin-bottom: -35px;
+}
+
+.styleInstructions ol > li:before {
+  content: counter(customlistcounter) " ";
+	position: relative;
+	top: 48px;
+	left: -285px;
+}
+
+.styleInstructions ol:first-child {
+  counter-reset: customlistcounter;
+}
+
+.styleInstructions ol.liteHold {
+	
+	color: #a72c9c;
+}
+
+.styleInstructions ol.regularHold {
+	
+	color: #00a482;
+}
+
+.styleInstructions ol.extraHold {
+	
+	color: #f28334;
+}
+
+.styleInstructions ol.custard {
+	
+	color: #7888b8;
+}
+
+.styleInstructions ol span {
+	
+	display: block;
+	font: 12px/18px 'Bodoni Regular';
+	text-align: left;
+	color: #000;
+}
+
+.styleTags {
+	
+	margin-bottom: 30px;
+	padding-top: 20px;
+	border-top: 3px solid #f28334;
+	font-size: 16px;
+}
+
+.styleTags h3 {
+	
+	display: inline-block;
+	padding: 5px 10px 5px 0;
+	margin-right: 15px;
+	border-right: 1px solid #000;
+	font: 24px 'Bodoni Regular';
+	text-transform: uppercase;
+	color: #7888b8;
+}
+
+.styleTags p {
+
+	display: inline-block;
+	width: 700px;
+	margin: -10px 0 0;
+	vertical-align: middle;
+}

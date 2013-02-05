@@ -1,0 +1,20 @@
+{
+	"obscenities": [
+		{
+			"obscenity": "death",
+			"replacement": "hamburger time"
+		},
+		{
+			"obscenity": "die",
+			"replacement": "hamburger time"
+		},
+		{
+			"obscenity": "fart",
+			"replacement": "flower"
+		},
+		{
+			"obscenity": "fuck",
+			"replacement": "duck"
+		}
+	]
+}

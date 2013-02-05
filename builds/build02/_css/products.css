@@ -1,0 +1,168 @@
+/* Products page styles */
+
+nav#products.active {
+	
+	display: block;
+	background-color:rgba(0, 0, 0, 1);
+}
+
+#content.products {
+	
+	border-color: #00a482;
+}
+
+#content_products {
+	
+	width: 603px;
+	border-top: 4px solid #00a482;
+	margin: 2px 0 0 205px;
+	padding-left: 30px;
+}
+
+#productDesc {
+	
+	width: 310px;
+	font-size: 15px;
+	line-height: 140%;
+	margin: 20px 30px 45px 0;
+}
+
+#productPrice {
+	
+	font-size: 21px;
+	margin: 0 0 20px;
+}
+
+#productsTabs {
+	
+	margin-bottom: 35px;
+}
+
+#productsTabs ul li a {
+	
+	display: block;
+	width: 165px;
+	padding: 10px 0;
+	font: 16px 'Bodoni Regular', Georgia, "Times New Roman", serif;
+	text-align: center;
+	color: #fff;
+}
+
+#productsTabs ul li a[href="#productsTabs-1"], #productsTabs-1 {
+	
+	background-color: #000;
+}
+
+#productsTabs ul li a[href="#productsTabs-2"], #productsTabs-2 {
+	
+	background-color: #9f9f9f;
+}
+
+#productsTabs-1 p,  #productsTabs-2 p {
+	
+	padding: 35px;
+	margin: 0;
+	color: #fff;
+	font-size: 15px;
+}
+
+#productsTabs-1 p {
+	
+	width: 345px;
+}
+
+/*!
+ * jQuery UI CSS Framework 1.8.23
+ *
+ * Copyright 2012, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Theming/API
+ */
+
+/* Layout helpers
+----------------------------------*/
+.ui-helper-hidden { display: none; }
+.ui-helper-hidden-accessible { position: absolute !important; clip: rect(1px 1px 1px 1px); clip: rect(1px,1px,1px,1px); }
+.ui-helper-reset { margin: 0; padding: 0; border: 0; outline: 0; line-height: 1.3; text-decoration: none; font-size: 100%; list-style: none; }
+.ui-helper-clearfix:before, .ui-helper-clearfix:after { content: ""; display: table; }
+.ui-helper-clearfix:after { clear: both; }
+.ui-helper-clearfix { zoom: 1; }
+.ui-helper-zfix { width: 100%; height: 100%; top: 0; left: 0; position: absolute; opacity: 0; filter:Alpha(Opacity=0); }
+
+
+/* Interaction Cues
+----------------------------------*/
+.ui-state-disabled { cursor: default !important; }
+
+
+/* Icons
+----------------------------------*/
+
+/* states and images */
+.ui-icon { display: block; text-indent: -99999px; overflow: hidden; background-repeat: no-repeat; }
+
+
+/* Misc visuals
+----------------------------------*/
+
+/* Overlays */
+.ui-widget-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+
+/*!
+ * jQuery UI Tabs 1.8.23
+ *
+ * Copyright 2012, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Tabs#theming
+ */
+.ui-tabs { position: relative; padding: zoom: 1; } /* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
+.ui-tabs .ui-tabs-nav { margin: 0; }
+.ui-tabs .ui-tabs-nav li { list-style: none; float: left; position: relative; top: 1px; margin: 0 .2em 1px 0; border-bottom: 0 !important; padding: 0; white-space: nowrap; }
+.ui-tabs .ui-tabs-nav li a { float: left; text-decoration: none; }
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected { margin-bottom: 0; padding-bottom: 1px; }
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected a, .ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-state-processing a { cursor: text; }
+.ui-tabs .ui-tabs-nav li a, .ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a { cursor: pointer; } /* first selector in group seems obsolete, but required to overcome bug in Opera applying cursor: text overall if defined elsewhere... */
+.ui-tabs .ui-tabs-panel { display: block; }
+.ui-tabs .ui-tabs-hide { display: none !important; }
+
+#module-01 {
+
+	padding-bottom: 15px;
+	border-bottom: 3px solid #d6d4dd;
+}
+
+#module-01 div {
+
+	float: left;
+	width: 350px;
+	margin-left: 20px;
+}
+
+#module-02 {
+
+	padding-top: 18px;
+}
+
+#module-02 a {
+
+	float: left;
+	display: block;
+	width: 165px;
+	padding: 40px 5px 25px 10px;
+	margin-right: 10px;
+	color: #000;
+	border: 1px solid #000;
+}
+
+#module-02 a img {
+
+	float: left;
+	position: relative;
+	top: -9px;
+	margin-right: 5px;
+}

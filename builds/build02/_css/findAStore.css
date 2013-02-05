@@ -1,0 +1,14 @@
+/* Find a Store page styles */
+
+#content.findStore {
+	
+	width: 805px;
+	margin-left: 30px;
+	border-top-color: #F28334;
+}
+
+#content_findStore {
+	
+	border-top: 4px solid #F28334;
+	margin-top: 2px;
+}
