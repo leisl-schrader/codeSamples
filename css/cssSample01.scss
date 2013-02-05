@@ -1,0 +1,1166 @@
+/* Sass variables */
+
+$highlightColor: #93c43b;	// bright green
+$accentColor01: #00c0f1; 	// cyan
+$accentColor02: #ebd2bd; 	// pink
+$bgColor01: #caf382; 		// pale green
+$bgColor02: #b7d74e;		// mid green
+$bgColor03: #e1e1e1;		// pale gray
+$bgColor04: #ffffff;		// white
+$bgColor05: #cee45b;		// another pale green, NOT IN STYLE GUIDE
+$bgColor06: #58a41b;		// another mid green, NOT IN STYLE GUIDE
+$bgColor07: #f6fae9;		// another pale green, NOT IN STYLE GUIDE
+$bgColor08: #b0cb54;		// another mid green, NOT IN STYLE GUIDE
+$bgColor09: #c5c5c5;		// another gray, NOT IN STYLE GUIDE
+$textColor01: #000000;		// black
+$textColor02: #636363;		// dark gray
+
+$siteRootPath: "/LoveMyBB/Content";
+
+
+/* Sass mixins */
+
+@mixin embedFont($fontName, $fileName) {
+  
+	  @font-face {
+		font-family: '#{$fontName}';
+		src: url('#{$siteRootPath}/_fonts/#{$fileName}.eot');
+		src: url('#{$siteRootPath}/_fonts/#{$fileName}.eot?#iefix') format('embedded-opentype'),
+			 url('#{$siteRootPath}/_fonts/#{$fileName}.woff') format('woff'),
+			 url('#{$siteRootPath}/_fonts/#{$fileName}.ttf') format('truetype'),
+			 url('#{$siteRootPath}/_fonts/#{$fileName}.svg') format('svg');
+		font-weight: normal;
+		font-style: normal;
+	}
+	/*
+	@font-face {
+		font-family: '#{$fontName} Italic';
+		src: url('#{$siteRootPath}/_fonts/#{$fileName}Ita.eot');
+		src: url('#{$siteRootPath}/_fonts/#{$fileName}Ita.eot?#iefix') format('embedded-opentype'),
+			 url('#{$siteRootPath}/_fonts/#{$fileName}Ita.woff') format('woff'),
+			 url('#{$siteRootPath}/_fonts/#{$fileName}Ita.ttf') format('truetype'),
+			 url('#{$siteRootPath}/_fonts/#{$fileName}Ita.svg') format('svg');
+		font-weight: normal;
+		font-style: normal;
+	}*/
+}
+
+@mixin gradientBG01 {
+  
+  @include background-image(linear-gradient(rgba(255, 255, 255, 0.95), rgba(215, 215, 215, 0.95)));
+}
+
+@mixin outsideBoxShadow {
+  
+  @include box-shadow(0 0 27px rgba(0,0,0,.8));
+}
+
+@mixin insetBoxShadow {
+  
+  @include box-shadow(inset 2px 5px 7px rgba(0,0,1,.45));
+}
+	
+/* Fonts */
+
+@include embedFont("DIN Regular", "DIN-Reg");
+@include embedFont("DIN Light", "DIN-Light");
+@include embedFont("DIN Medium", "DIN-Med");
+@include embedFont("DIN Bold", "DIN-Bold");
+
+
+/* Typography */
+
+body {
+  position: relative;
+  width: 805px;
+  font: 14px/18px 'DIN Regular', Helvetica, Arial, sans-serif;
+  color: $textColor01;
+}
+
+h1, h2, h3, h4, h5 {
+
+	font-family: 'DIN Bold';
+	text-transform: uppercase;
+	font-weight: normal;
+	
+	img {
+	
+		vertical-align: top;
+	}
+}
+
+h1 {
+
+	font-size: 80px;
+	line-height: 66px;
+	letter-spacing: -4px;
+}
+
+h2 {
+
+	font-size: 35px;
+	line-height: 33px;
+	letter-spacing: -2px;
+}
+
+h3 {
+
+	font-size: 30px;
+	line-height: 27px;
+}
+
+h4 {
+
+	font-size: 26px;
+	line-height: 26px;
+}
+
+h5 {
+
+	font-size: 18px;
+}
+
+h6 {
+
+	font: 16px/18px 'DIN Light';
+	font-weight: normal;
+}
+
+.accent, .accent02 {
+
+		position: relative;
+		left: -25px;
+		display: inline-block;
+}
+
+.accent {
+	
+		margin: 5px 0 10px 0;
+		padding: 10px 8px 8px 25px;
+		color: $textColor01;
+		@include background-image(linear-gradient(lighten($accentColor02, 15%), $accentColor02));
+}
+
+.accent02 {
+	
+		margin-bottom: 7px;
+		color: #fff;
+		background-color: $accentColor01;
+		@include background-image(linear-gradient($accentColor01, darken($accentColor01, 10%)));
+		padding: 10px 15px 5px 30px;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+a {
+  color: $highlightColor;
+  &:active {
+    text-decoration: underline;
+  }
+	&:visited {
+    color: $highlightColor;
+  }
+}
+
+strong {
+
+	font-weight: normal;
+	font-family: 'DIN Bold';
+}
+
+.finePrint {
+	font-size: 9px;
+	line-height: 10px;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.superscript {
+  font-size: 80%;
+  position: relative;
+  top: -3px;
+  left: 1px;
+}
+
+/* Layout */
+
+ul {
+  margin-left: 15px;
+}
+
+textarea, input, select {
+  font-family: 'DIN Regular', Helvetica, Arial, sans-serif;
+}
+
+input[type=text], select {
+
+	border: 1px solid $bgColor09;
+	padding: 8px;
+	@include box-shadow(inset 1px 1px 10px 1px $bgColor09);
+	@include border-radius(8px);
+}
+
+
+select option {
+
+	padding: 5px 8px;
+	border-bottom: 1px solid $bgColor03;
+}
+
+button, a.button, input[type=submit] {
+
+	display: inline-block;
+	min-width: 130px;
+	padding: 10px;
+	margin-right: 10px;
+	border: 0;
+	color: $textColor01;
+	@include background-image(linear-gradient($bgColor05, $bgColor06));
+	@include single-box-shadow;
+	font: 13px/15px 'DIN Medium';
+	text-align: center;
+	text-transform: uppercase;
+	text-decoration: none;
+	
+	&:hover {
+	
+		@include background-image(linear-gradient($bgColor06, $bgColor05));
+	}
+	
+	&.altButton {
+	
+		@include background-image(linear-gradient(left top, $bgColor04, $bgColor09));
+		
+		&:hover {
+		
+			@include background-image(linear-gradient(left top, $bgColor09, $bgColor04));
+		}
+	}
+}
+
+.margin-reset {
+  margin: 0 !important;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.center {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+/* Effects */
+
+.fullOpacity {
+
+	@include opacity(1);
+}
+
+.halfOpacity {
+
+	@include opacity(0.5);
+}
+
+/* Page layout - Global */
+
+header {
+
+	position: absolute;
+	z-index: 99;
+	text-transform: uppercase;
+	@include gradientBG01;
+	
+	img {
+	
+		vertical-align: top;
+	}
+}
+
+header nav {
+
+	display: inline-block;
+	
+	ul {
+	
+		font-size: 0;
+	}
+
+	li {
+	
+		display: inline-block;
+	}
+	
+	a {
+		display: block;
+		width: 155px;
+		padding: 35px 0 20px 0;
+		border-left: 1px solid #c0c0c0;
+		text-align: center;
+		font: 14px 'DIN Medium';
+		color: $textColor02;
+		text-decoration: none;
+		
+		&:visited {
+			color: $textColor02;
+		}
+		
+		&:hover, &.active {
+			color: $textColor02;
+			font-family: 'DIN Bold';
+			@include background-image(linear-gradient($bgColor07, $bgColor08));
+			@include box-shadow(inset 0px 0px 10px 1px $textColor02);
+		}
+	}
+	
+}
+
+div[role="main"] {
+	
+	.bodyColumn {
+
+		width: 50%;
+		float: left;
+	}
+	
+	.pointCircle {
+		
+		position: relative;
+		width: 50px;
+		height: 50px;
+		font: 25px 'DIN Bold';
+		text-align: center;
+		
+		.circle {
+			position: absolute;
+			width: 100%;
+		   	height: 100%;
+		   	background: #000; 
+		   	@include border-radius(25px);
+		   
+		}
+		
+		p {
+			position: absolute;
+			z-index: 2;
+			width: 100%;
+			margin: 8px 0 0;
+			letter-spacing: -1px;
+			color: #fff;
+		}
+	}
+}
+
+/* rewards jCarousel skin */
+
+$carousel-global-width: 805px;
+$carousel-item-width: 235px;
+$carousel-item-height: 280px;
+$carousel-arrow-width: 25px;
+$carousel-arrow-height: 25px;
+
+.jcarousel-skin-rewards {
+
+	#controls {
+	
+		margin-top: 25px;
+		text-align: center;
+	
+		a {
+			display: inline-block;
+			width: 16px;
+			height: 16px;
+			margin-right: 12px;
+			background: #000; 
+			@include border-radius(8px);
+			@include opacity(0.3);
+			
+			&:first-child{
+				margin-left: 12px;
+			}
+			
+			&:hover {
+			
+				@include opacity(1);
+			}
+		}
+	}
+
+	.jcarousel-container {
+		
+	}
+	
+	.jcarousel-container-horizontal {
+		width: $carousel-global-width;
+		height: 350px;
+	}
+	
+	.jcarousel-clip {
+		overflow: hidden;
+	}
+	
+	.jcarousel-clip-horizontal {
+		width:  $carousel-global-width;
+		height: $carousel-item-height;
+		background-color: #fff;
+	}
+	
+	.jcarousel-item {
+		width: $carousel-item-width;
+		height: $carousel-item-height;
+	}
+	
+	.jcarousel-item-horizontal {
+
+	}
+	
+	.jcarousel-item-placeholder {
+		background: #fff;
+		color: #000;
+	}
+	
+	.jcarousel-next-horizontal, .jcarousel-prev-horizontal {
+		position: absolute;
+		bottom: 25px;
+		width: $carousel-arrow-width;
+		height: $carousel-arrow-height;
+		cursor: pointer;
+		background: transparent url('#{$siteRootPath}/_img/global/next.png') no-repeat 0 0;
+		@include opacity(0.3);
+	}
+	
+	.jcarousel-next-horizontal {
+		
+		right: 250px;
+		background: transparent url('#{$siteRootPath}/_img/global/next.png') no-repeat 0 0;
+	}
+	
+	.jcarousel-prev-horizontal {
+	   
+		left: 250px;
+		background: transparent url('#{$siteRootPath}/_img/global/prev.png') no-repeat 0 0;
+	}
+
+}
+
+/* reviews jCarousel skin */
+
+$carousel-reviews-global-width: 255px;
+$carousel-reviews-item-width: 245px;
+$carousel-reviews-item-height: 90px;
+$carousel-reviews-arrow-width: 25px;
+$carousel-reviews-arrow-height: 45px;
+
+.jcarousel-skin-reviews {
+
+	.jcarousel-container {
+		background: #fff;
+		@include insetBoxShadow;
+		margin-bottom: 25px;
+		overflow: hidden;
+	}
+	
+	.jcarousel-container-horizontal {
+		width: $carousel-reviews-global-width;
+		padding: 30px 40px 30px 55px;
+	}
+	
+	.jcarousel-clip {
+		overflow: hidden;
+	}
+	
+	.jcarousel-clip-horizontal {
+		width:  $carousel-reviews-global-width;
+		height: $carousel-reviews-item-height;
+	}
+	
+	.jcarousel-item {
+		width: $carousel-reviews-item-width;
+		height: $carousel-reviews-item-height;
+	}
+	
+	.jcarousel-item-horizontal {
+		margin-left: 0;
+		margin-right: 20px;
+	}
+	
+	.jcarousel-item-placeholder {
+		background: #fff;
+		color: #000;
+	}
+	
+	.jcarousel-next-horizontal, .jcarousel-prev-horizontal {
+	
+		position: absolute;
+		top: 43px;
+		width: $carousel-reviews-arrow-width;
+		height: $carousel-reviews-arrow-height;
+		cursor: pointer;
+		@include box-shadow(1px 3px 6px rgba(0,0,1,.3));
+		background-color: $bgColor05;
+		background-repeat: no-repeat;
+		background-position: 0 10px;
+		@include opacity(0.3);
+	}
+	
+	.jcarousel-next-horizontal {
+	   
+		right: 0;
+		background-image: url('#{$siteRootPath}/_img/global/next.png');
+	}
+	
+	.jcarousel-prev-horizontal {
+		
+		left: 0;
+		background-image: url('#{$siteRootPath}/_img/global/prev.png');
+	}
+
+}
+
+.jcarousel-next-horizontal:hover,
+.jcarousel-next-horizontal:focus,
+.jcarousel-prev-horizontal:hover, 
+.jcarousel-prev-horizontal:focus {
+	@include opacity(1);
+}
+
+.jcarousel-next-horizontal:active,
+.jcarousel-prev-horizontal:active {
+	@include opacity(1);
+}
+
+.jcarousel-next-disabled-horizontal,
+.jcarousel-next-disabled-horizontal:hover,
+.jcarousel-next-disabled-horizontal:focus,
+.jcarousel-next-disabled-horizontal:active,
+.jcarousel-prev-disabled-horizontal,
+.jcarousel-prev-disabled-horizontal:hover,
+.jcarousel-prev-disabled-horizontal:focus,
+.jcarousel-prev-disabled-horizontal:active {
+	cursor: default;
+	@include opacity(0.3);
+}
+
+
+/* select element skin */
+
+span.customSelect { 
+	padding: 7px 0 7px 15px; 
+	@include gradientBG01;
+	@include border-top-radius(5px);
+	@include box-shadow($textColor02 1px 1px 2px 0px);
+	
+	&.changed { 
+		background-color: #f0dea4; 
+	}
+}
+
+.customSelectInner { 
+	background:url('#{$siteRootPath}/_img/global/down.png') no-repeat center right; 
+}
+
+/* Tab - Home/About Page */
+
+#aboutLandingMain {
+
+	#hero {
+		position: relative;
+		width: 280px;
+		padding: 130px 500px 85px 25px;
+		background: transparent url('#{$siteRootPath}/_img/aboutLanding/hero_img01.jpg') no-repeat scroll 0 0;
+		
+		// temporary for prelaunch page
+		
+		#logo {
+		
+			position: absolute;
+			left: 5px;
+			top: 15px;
+		}
+		
+		#comingSoon {
+		
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			padding: 15px 0;
+			font-size: 17px;
+			text-align: center;
+			text-transform: uppercase;
+			@include opacity(0.8);
+			@include background-image(linear-gradient($bgColor05 0%,$bgColor05 70%,darken($bgColor05, 20%) 100%));
+		}
+	}
+	
+	#productCallout {
+		
+		position: relative;
+		width: 765px;
+		height: 430px;
+		padding: 30px 20px;
+		font-size: 10px;
+		color: #fff;
+		@include background-image(linear-gradient(#000 0%,#000 70%,#3a3a3a 71%,#000 100%));
+		
+		#product01, #product02 {
+			
+			float: left;
+			width: 330px;
+			height: 290px;
+			margin-top: 40px;
+			
+			p, ul {
+				line-height: 13px;
+				text-transform: uppercase;
+			}
+			
+			h6.regular {
+			
+				margin-bottom: 10px;
+			}
+			
+			h6.highlight {
+			
+				font-family: 'DIN Medium';
+				color: $textColor01;
+				padding: 3px 10px 0 10px;
+				margin-bottom: 5px;
+			}
+		}
+		
+		#product01 {
+		
+			top: 120px;
+			left: 30px;
+			padding: 0 20px 0 45px;
+		
+			h6.regular {
+			
+				position: relative;
+				color: $accentColor01;
+				
+				img {
+				
+					position: absolute;
+					left: -55px;
+					top: -20px;
+				}
+			}
+			
+			h6.highlight {
+			
+				background-color: $accentColor01;
+			}
+		
+			& > img {
+			
+				position: absolute;
+				left: 245px;
+				top: 120px;
+			}
+		}
+		
+		#product02 {
+		
+			top: 120px;
+			left: 450px;
+			padding-left: 20px;
+			text-align: right;
+		
+			h6.regular {
+			
+				color: $highlightColor;
+			}
+			
+			h6.highlight {
+			
+				background-color: $highlightColor;
+			}
+		
+			& > img {
+		
+				position: absolute;
+				left: 380px;
+				top: 95px;
+				
+			}
+			
+			ul {
+			
+				direction: rtl;
+				padding-right: 15px;
+			}
+		}
+		
+		a.button, #shades {
+		
+			position: relative;
+			z-index: 2;
+		}
+		
+		#shades {
+		
+			top: -25px;
+			float: right;
+			width: 400px;
+			background: transparent url('#{$siteRootPath}/_img/aboutLanding/productCallout_img10.png') no-repeat scroll 0 40px;
+			line-height: 12px;
+			
+			a {
+				color: #fff;
+				text-transform: uppercase;
+			}
+			
+			.col {
+				
+				float: left;
+				margin: 0 0 20px 30px;
+				
+				&:first-child {
+				
+					padding-top: 20px;
+				}
+					
+				div {
+					
+					display: inline-block;
+					margin-left: 10px;
+					cursor: pointer;
+					
+					img {
+						
+						margin-top: 15px;
+					}
+					
+					&:hover {
+						background: transparent url('#{$siteRootPath}/_img/aboutLanding/downSm.png') no-repeat scroll center top;
+					}
+					
+					&:hover img {
+						@include scale(1.3);
+					}
+				}
+			}
+			
+			.col.uppercase {
+			
+				float: right;
+				color: $accentColor02;
+				margin: 0 50px 0 -5px;
+			}
+			
+		}
+	}
+	
+	#rewardsCallout {
+	
+		padding: 50px 200px 0 30px;
+		height: 285px;
+		background: transparent url('#{$siteRootPath}/_img/aboutLanding/rewardsCallout_img01.png') no-repeat scroll 0 0;
+		
+		p {
+			width: 400px;
+		}
+	}
+	
+	#sweepsCallout {
+	
+		
+		height: 285px;
+		padding: 50px 200px 0 25px;
+		color: #fff;
+		background: #000 url('#{$siteRootPath}/_img/global/photo_01.jpg') no-repeat scroll 0 -90px;
+	}
+	
+	#reviews {
+	
+		height: 379px; // not a great thing to do but the equal height thing seems to crap out because the custom fonts haven't loaded when it runs?
+		padding: 15px 25px 15px;
+		background-color: $bgColor01;
+		@include box-shadow(0 0 13px rgba(9,9,9,.3));
+		@include background-image(linear-gradient(bottom, rgba(0,0,0,.13) -25%, rgba(0,0,0,0) 125%));
+		@include insetBoxShadow;
+		
+		h2 img {
+			vertical-align: middle;
+		}
+	}
+	
+	#coupon {
+	
+		padding: 10px;
+		@include background-image(linear-gradient(#7c8c91 0%,#d0ebf4 6%,#d0ebf4 70%,#e3f4fa 71%,#d0ebf4 100%));
+	
+		#cutout {
+			
+			padding: 10px;
+			border: 3px dashed #ccc;
+			border-radius: 10px;
+		}
+	}
+	
+	#retailers {
+	
+		padding: 12px 18px 18px 25px;
+		background-color: $bgColor03;
+	}
+	
+	#learnMore {
+	
+		@include gradientBG01;
+		padding: 28px 35px 0 25px;
+		
+		p {
+			width: 570px;
+		}
+	}
+}
+
+/* Tab - My BB Rewards Page */
+
+#rewardsLandingMain {
+
+	padding-bottom: 35px;
+	background-color: $bgColor03;
+
+	#hero {
+		
+		height: 300px;
+		padding: 125px 370px 25px 25px;
+		background: transparent url('#{$siteRootPath}/_img/rewardsLanding/hero_img01.jpg') no-repeat scroll top center;
+		
+		h6 {
+			
+			width: 280px;
+			margin-bottom: 15px;
+		}
+		
+	  a.button {
+		
+			min-height: 30px;
+			vertical-align: middle;
+		}
+	}
+
+	#howitworks {
+	
+		padding: 30px;
+		color: #fff;
+		@include background-image(radial-gradient(center, circle cover, #3a3a3a 0%,#000 100%));
+		
+		img {
+		
+			margin: 30px 0 30px 50px;
+			
+			&:first-child {
+			
+				margin-left: 0;
+			}
+		}
+	}
+	
+	#rewards {
+		
+		margin-bottom: 35px;
+		padding-top: 25px;
+		@include background-image(radial-gradient(center, circle cover, $bgColor01 0%,$bgColor02 100%));
+		@include outsideBoxShadow;
+		
+		h2, h6 {
+		
+			margin-left: 30px;
+		}
+		
+		h6 {
+		
+			margin-bottom: 25px;
+		}
+		
+		#carousel li {
+		
+			position: relative;
+			text-transform: uppercase;
+			@include opacity(0.3);
+		
+			&:hover {
+				@include opacity(1);
+			}
+			
+			img {
+		
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 235px;
+				height: 205px;
+			}
+			
+			.wrapper {
+			
+				position: absolute;
+				bottom: 0;
+				z-index: 2;
+				width: 100%;
+				background-color: #fff;
+		
+				.pointCircle {
+				
+					float: right;
+					margin: 8px 8px 14px 25px;
+				}
+				
+				h6 {
+				
+					margin: 25px 0 10px 15px;
+				}
+			}
+			
+			a {
+				display: none;
+				clear: both;
+				padding: 10px 15px;
+				color: $textColor01;
+				text-decoration: none;
+				border-top: 2px solid $bgColor03;
+				background: transparent url('#{$siteRootPath}/_img/global/cta.png') no-repeat scroll 110px 9px;
+			}
+			
+			&:hover a {
+				display: block;
+			}
+		}
+	}
+}
+
+/* Tab - Rate and Review Page */
+
+#reviewLandingMain {
+
+	#hero {
+		
+		position: relative;
+		height: 200px;
+		padding: 125px 0 100px 25px;
+		@include gradientBG01;
+		
+		h1 {
+		  
+		  width: 400px;
+		  margin-bottom: 10px;
+		  font-size: 66px;
+		  line-height: 58px;
+		}
+		
+		.accent {
+		
+			min-width: 300px;
+		}
+		
+		& > img {
+		
+			position: absolute;
+			right: 0;
+			bottom: 0;
+		}
+	}
+
+	#filter {
+	
+		padding: 35px 40px 25px;
+		@include background-image(linear-gradient(darken($bgColor01, 50%) 0%,$bgColor01 20%,$bgColor01 100%));
+		
+		select {
+			width: 235px;
+		}
+		
+		select, .customSelect {
+			margin-left: 25px;
+		}
+	}
+	
+	#reviews {
+	  
+	  padding: 75px 30px;
+	  
+	  img:first-child {
+	    
+	    position: relative;
+	    top: -50px;
+	  }
+	
+		h4 {
+		  
+		  margin-top: 5px;
+		  color: $highlightColor;
+		  font-family: 'DIN Regular';
+		}
+	}
+}
+
+/* Tab - Sweepstakes Page (Entry form and confirmation) */
+
+#sweepsLandingMain {
+
+	#hero {
+		
+		padding: 140px 500px 75px 25px;
+		color: #fff;
+		background: transparent url('#{$siteRootPath}/_img/global/photo_01.jpg') no-repeat scroll 0 0;
+	}
+
+	#form {
+	
+		padding: 28px;
+		@include background-image(radial-gradient(center, circle cover, $bgColor01 0%,$bgColor06 200%));
+		
+		a {
+		
+			color: $textColor01;
+		}
+		
+		input {
+		
+			margin: 0 8px 10px 0;
+		
+			&.xlgField {
+		
+				width: 345px;
+			}
+			
+			&.lgField {
+      
+        width: 159px;
+      }
+			
+			&.mdField {
+			
+				width: 102px;
+			}
+			
+			&.xsmField {
+			
+				width: 22px;
+			}
+			
+			&.smField {
+      
+        width: 30px;
+      }
+		
+		}
+		
+		select {
+
+		  width: 100px;
+		}
+		
+		.customSelect {
+		  margin: 0 8px 10px 0;
+		  padding-left: 10px;
+		}
+		
+		label.finePrint {
+		  display: inline-block;
+		  width: 150px;
+		}
+		
+		#captcha {
+		  
+		  display: inline-block;
+		  margin: 25px 25px 0 0;
+		}
+		
+		.validation-summary-errors {
+		
+			padding: 15px 20px;
+			margin: 20px 0px;
+			border: solid 1px #c00;
+			font-family: 'DIN Bold';
+			background-color: #ffc;
+			
+			li {
+		
+				display: block;
+				background: url('#{$siteRootPath}/_img/global/exclamation.png') no-repeat 0px 50%;
+				padding: 5px 0 5px 25px; 
+			}
+		}
+		
+		.field-validation-error,
+		span.input-validation-error {
+		
+			color: #c00;
+		}
+		
+		input.input-validation-error,
+		textarea.input-validation-error,
+		select.input-validation-error {
+		
+			border: 1px solid #c00;
+			background-color: #ffc;
+		}
+			
+		.error {
+			
+		}		
+
+		
+	}
+	
+	#confirmation {
+  
+    padding: 28px;
+    @include background-image(radial-gradient(center, circle cover, $bgColor01 0%,$bgColor06 200%));
+    
+      #colLeft, #colDivider, #colRight {
+      
+        float: left;
+        margin-top: 40px;
+      }
+      
+      #colLeft {
+        
+        width: 300px;
+        padding-right: 35px;
+        
+        a {
+            display: inline-block;
+            margin-left: 5px;
+            text-decoration: none;  
+        }
+        
+      }
+      
+      #colDivider {
+        
+        width: 2px;
+        height: 150px;
+        background-color: #000;
+        @include background-image(linear-gradient(top, $bgColor01 0%,#546432 50%,$bgColor01 100%));
+      }
+      
+      #colRight {
+        
+        width: 360px;
+        padding-left: 50px;
+        
+      }
+        
+    }
+    
+}
+
