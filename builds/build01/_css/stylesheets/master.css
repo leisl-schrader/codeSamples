@@ -1,0 +1,276 @@
+/*
+ * OneStopPlus.com Master CSS
+ *
+ * Imports all globally available styles, configs and overrides
+ *
+ */
+/* Compass library imports */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* Config imports */
+/* config / vars
+ *
+ * Sets general global vars
+ *
+ */
+/* Dimensions vars */
+/* config / breakpoints
+ *
+ * Sets values to be used in media queries
+ *
+ */
+/*
+Sourced from https://gist.github.com/anthonyshort/2028061
+
+These mixins make media queries a breeze with Sass.
+The media queries from mobile up until desktop all
+trigger at different points along the way
+
+And important point to remember is that and width
+over the portrait width is considered to be part of the
+landscape width. This allows us to capture widths of devices
+that might not fit the dimensions exactly. This means the break
+points are seamless.
+
+*/
+/* config / colors
+ *
+ * Sets colors in hex format
+ *
+ */
+/* config / typography
+ *
+ * Sets defaults related to text
+ *
+ */
+/* Base and layout imports */
+/* Base rules
+ *
+ * Sets defaults for HTML elements only, listed in alphabetical order
+ *
+ */
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a {
+  color: blue;
+  text-decoration: none;
+}
+a:hover, a:active {
+  text-decoration: underline;
+}
+
+body {
+  font: 12px Helvetica, Arial, sans-serif;
+  color: #000;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+sup {
+  font-size: 80%;
+  position: relative;
+  top: -1empx;
+  left: 0.5em;
+}
+
+textarea {
+  font: 100% Helvetica, Arial, sans-serif;
+}
+
+ul {
+  margin-left: 1em;
+}
+
+/* Layout rules
+ *
+ * Sets defaults for global overall page layout. Some larger portions of global layout may be broken out into their own modules, like header and footer
+ *
+ */
+#l-content {
+  padding: 1%;
+}
+
+#l-promo {
+  background-color: red;
+  color: white;
+  font-size: 3em;
+  font-weight: bold;
+  padding: 1%;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+/* Patterns imports */
+/* patterns / dropdownMenu
+ *
+ * A navigation pattern to show a secondary menu under a primary menu
+ *
+ */
+.p-dropdownMenu-secondary {
+  display: none;
+  position: absolute;
+}
+
+.p-dropdownMenu-primary:hover .p-dropdownMenu-secondary {
+  display: block;
+}
+
+/* patterns / positioning
+ *
+ * Sets pattern classes for use in making small adjustments to the position of elements
+ *
+ */
+.p-floatLeft {
+  float: left;
+}
+
+.p-floatRight {
+  float: right;
+}
+
+.p-centered {
+  text-align: center;
+}
+
+.p-horizontalList {
+  font-size: 0;
+}
+.p-horizontalList > * {
+  display: inline-block;
+  list-style-type: none;
+  font-size: 12px;
+  margin: 0;
+}
+
+.p-clearfix {
+  overflow: hidden;
+  *zoom: 1;
+}
+
+/* Modules imports */
+/* modules / header
+ *
+ * Global site header
+ *
+ */
+#l-header {
+  padding: 1%;
+}
+#l-header .e-title {
+  float: left;
+  font-size: 3em;
+}
+
+.m-header-searchForm {
+  float: right;
+}
+
+.m-header-nav {
+  margin-top: 1%;
+}
+
+.m-header-nav-primary, .m-header-nav-secondary {
+  background-color: white;
+}
+
+.m-header-nav-primary .e-rootCat-link {
+  display: block;
+  padding: 0.5em 1em;
+}
+
+.m-header-nav-secondary {
+  padding: 1em;
+}
+
+/* modules / footer
+ *
+ * Global site footer
+ *
+ */
+#l-footer {
+  padding: 1%;
+}
+
+.m-footer-nav-primary > * {
+  font-size: 0.75em;
+  padding: 0.5em 1em;
+}
+
+/* Overrides imports */
+/* Overrides
+ *
+ * Rules applied in Chameleon or otherCMS
+ *
+ * */
+/* IE
+ *
+ * Add any IE browser specific fixes here, using the scoping method
+ *
+ */

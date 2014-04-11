@@ -1,0 +1,40 @@
+/* @partial library/patterns */
+
+/**
+ * This partial holds recurring patterns not specific to any component.
+ *
+ * Use the `components` directory for styles that are specific to a component.
+ */
+
+/**
+ * Set colors based on archetype.
+ *
+ * `.atype-<archetype>`
+ *     Apply Archetype foreground color.
+ * `.display-context-<archetype> .atype-from-display-context`
+ *     Color set to children starting from the key selector.
+ *     `display-context-<archetype>` determines the color.
+ * `*--invert`
+ *     Suffix with invert to set the archetype color on background. The fore-
+ *     ground color will be set to a neutral white.
+ *
+ * To have links pick-up the colors, set the color property to "inherit".
+ */
+@each $archetype in archetype-list() {
+  .atype-#{$archetype},
+  .display-context-#{$archetype} .atype-from-display-context {
+    color: archetype-color($archetype);
+  }
+  .atype-#{$archetype}--invert,
+  .display-context-#{$archetype} .atype-from-display-context--invert {
+    color: lighten($base-color-neutral, 30%);
+    background-color: archetype-color($archetype);
+  }
+}
+
+.touch-scrollable {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}

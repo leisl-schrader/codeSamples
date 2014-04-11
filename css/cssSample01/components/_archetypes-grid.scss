@@ -1,0 +1,38 @@
+// archetype icons gets its own grid
+.archetypes-grid-outer {
+    position: relative;
+    @include layout(4,0) {
+    @include clearfix;
+  .archetypes-grid {
+    white-space: nowrap;
+    margin: 0 0 20px;
+    border: 1px solid #ccc;
+    border-width: 0 0 1px 1px;
+      li {
+        float: left;
+        width: column-span(1,1);
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-width: 1px 1px 0 0;
+      }
+      a {
+        font-size: 1rem;
+        font-weight: bold;
+      }
+
+      [class^="icn"] {
+        display: block;
+        font-size: 2rem;
+        margin-bottom: 5%;
+      }
+      > li {
+        width: grid-span(1,1);
+        display: inline-block;
+        text-align: center;
+      }
+    }
+  }
+  select.archetypes-grid-category {
+    width: column-span(6,1);
+  }
+ }

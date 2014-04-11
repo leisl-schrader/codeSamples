@@ -1,0 +1,21 @@
+/* Layout rules
+ *
+ * Sets defaults for global overall page layout. Some larger portions of global layout may be broken out into their own modules, like header and footer
+ *
+ */
+
+
+#l-content {
+  padding: 1%;
+}
+
+#l-promo {
+  background-color: $default-promo-bg-color;
+  color: $default-promo-fg-color;
+  font-size: 3em;
+  font-weight: bold;
+  padding: 1%;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+}

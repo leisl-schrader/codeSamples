@@ -1,0 +1,38 @@
+// Shop
+
+// Mobile Layout for products
+
+.shop.category {
+  .products {
+    @extend .touch-scrollable;
+    height: 300px;
+    .node-teaser--product {
+      width: grid-span(3, 1);
+      display: inline-block;
+      white-space: normal;
+    }
+  }
+}
+
+.products-list {
+  .node-teaser--product {
+    @include grid-span(3, 1);
+    &:nth-child(2n){
+      @include grid-span(3, 'last');
+    }
+  }
+}
+
+.node-teaser--product {
+  padding: 1em;
+  text-align: center;
+  .category {
+    @extend %default-border-bottom;
+  }
+}
+
+.product-node {
+  .cta {
+    float: right;
+  }
+}

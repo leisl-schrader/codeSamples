@@ -1,5 +1,9 @@
-.jcarousel-control>div {
-		
-	display: inline;
-	margin-right: 3px;	
+.carousel_slide01_body_button {
+	
+	margin-bottom: 0;
+}
+
+.carousel_body_feature {
+
+	padding-bottom: 0;
 }

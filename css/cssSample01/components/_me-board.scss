@@ -1,0 +1,92 @@
+// Me Board Node Teasers
+.node-teaser--me {
+  border: 1px solid black;
+  position: relative;
+  @include grid-span(6);
+  @include trailer(0.5);
+  @include leader(0.5);
+  .category {
+    border-top-style: solid;
+    border-top-width: 1%;
+    
+    [class^="icn"] {
+      margin-right: 0.5em;
+    }
+  }
+  .me-item-section {
+    @extend %default-border-bottom;
+  }
+  .user-badge {
+    @extend %default-border-top;
+  }
+  .location {
+    color: #63C6E6;
+    
+    [class^="icn"] {
+      margin-right: 0.5em;
+    }
+  }
+  
+  .comment-button, .shop-button {
+    display: inline-block;
+    margin-left: 20%;
+    vertical-align: middle;
+    
+    a[class^="icn"] {
+      display: inline-block;
+      font-size: 1.5rem;
+      vertical-align: middle;
+    }
+    
+    
+  }
+  
+  .shop-button {
+   
+    text-align: center;
+    
+    .icn--shop {
+      display: block;
+      font-size: 1.5em;
+      margin: 0.25em 0;
+    }
+  }
+  
+  .number  {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .brand-name {
+   font-weight: bold;
+   margin: 0;
+  }
+  .product-name {
+    display: inline-block;
+    font-style: italic;
+    margin: 0;
+    width: 65%;
+  }
+  .product-price {
+    display: inline-block;
+    font-weight: bold;
+    margin: 0;
+    text-align: right;
+    width: 30%;
+  }
+}
+
+.cta-flag {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  display: none;
+  right: 0;
+  padding: 1%;
+  position: absolute;
+  top: 0;
+}
+// :hover {
+//   .cta-flag {
+//     display: block;
+//   }
+// }

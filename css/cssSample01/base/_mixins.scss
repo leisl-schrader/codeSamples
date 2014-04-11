@@ -1,0 +1,19 @@
+/* @partial base/mixins */
+
+
+// Converts px to rem for font-size and line-height (latter is optional).
+@mixin font-size($font-size, $line-height: null) {
+
+  @each $arg in (('$font-size' $font-size) ('$line-height' $line-height)) {
+    @if nth($arg, 2) != null and (unit(nth($arg, 2)) == '' or relative-unit(nth($arg, 2))) {
+      @warn "#{nth($arg, 1)} = #{nth($arg, 2)} - Requires a numeric value with an absolute unit of measurement.";
+    }
+  }
+
+  /* #{$font-size} */
+  font-size: to-relative($font-size, $base-font-size, 'rem');
+  @if $line-height != null {
+    /* #{$line-height} */
+    line-height: to-relative($line-height, $base-font-size, 'rem');
+  }
+}

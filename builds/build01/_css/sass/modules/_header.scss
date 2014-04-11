@@ -1,0 +1,38 @@
+/* modules / header
+ *
+ * Global site header
+ *
+ */
+
+#l-header {
+  padding: 1%;
+
+  .e-title {
+    float: left;
+    font-size: 3em;
+  }
+
+}
+
+.m-header-searchForm {
+  float: right;
+}
+
+.m-header-nav {
+  margin-top: 1%;
+}
+
+.m-header-nav-primary, .m-header-nav-secondary {
+  background-color: $default-bg-color;
+}
+
+.m-header-nav-primary {
+  .e-rootCat-link {
+    display: block;
+    padding: 0.5em 1em;
+  }
+}
+
+.m-header-nav-secondary {
+  padding: 1em;
+}

@@ -1,0 +1,250 @@
+/* @partial components/profile */
+
+.js .my-profile {
+  width: $base-width-profile-pane;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -$base-width-profile-pane;
+}
+
+
+// @todo moved from partials/profile
+.page-wrapper {
+  position: relative;
+  border-left: 1px solid #ccc;
+  margin-left: -1px;
+  z-index: 1000;
+  box-shadow: -3px 0 7px rgba(0, 0, 0, 0.1);
+}
+
+.up-actions {
+  @extend %default-border-bottom;
+  padding: 0.5em 0;
+  text-align: center;
+  a {
+    display: inline-block;
+    color: $base-color-fg;
+    margin-right: 1.25em;
+    vertical-align: middle;
+  }
+  .icn--mail {
+    font-size: 0.75em;
+  }
+  .icn--arrow-down {
+    font-size: 0.35em;
+    margin-left: 1em;
+    position: relative;
+    top: -0.8em;
+  }
+ }
+.up-picture {
+  @extend %default-border-bottom;
+  padding: 10px;
+  text-align: center;
+  img {
+    display: inline-block;
+  }
+}
+
+.up-name {
+  @extend %default-border-bottom;
+  padding: 20px 10px 10px;
+  font-weight: bold;
+}
+.up-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: .8em;
+  
+  a {
+    
+    [class^="icn"] {
+      float: right;
+    }
+    
+    .icn--settings {
+      font-size: 1.5em;
+      margin-right: 1em;
+    }
+    
+    .icn--arrow-right {
+      display: inline;
+      font-size: 1.5em;
+    }
+    
+    .icn--arrow-down {
+      display: none;
+    }
+    
+    &.is-active {
+      
+      .icn--arrow-right {
+        display: none;
+      }
+      
+      .icn--arrow-down {
+        display: inline;
+      }
+    }
+  }
+  li {
+    padding: 0;
+    margin: 0;
+    border-bottom: 1px solid #ccc;
+    a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color:#999;
+      span.up-list-number {
+        color:#fff;
+        background: #999;
+        display: inline-block;
+        width: 22px;
+        margin-right: 5px;
+        text-align: center;
+      }
+    }
+  }
+  ul {
+    margin: 0;
+    padding: 5px 0;
+    border-top: 1px solid #ccc;
+    li {
+      border: 0;
+      font-weight: bold;
+      a {
+        padding: 10px 20px;
+      }
+    }
+  }
+}
+// Generic profile view
+
+.user-profile-generic {
+  position: relative;
+  @include layout(12) {
+  @include clearfix;
+  .up-actions {
+    padding: 0;
+    @include grid-span(4, last);
+    a {
+      border-left: 1px solid #ccc;
+      padding: 11px;
+    }
+      a.icn--friends {
+        width: column-span(6,1);
+        float: left;
+        background: url(../../images/icon-up-actions.png) no-repeat 8px 4px;
+        background-size: 25px auto;
+      }
+      a.icn--activity {
+        width: column-span(6,1);
+        float: left;
+        display: block;
+        background: url(../../images/icon-up-actions.png) no-repeat 5px -50px;
+        background-size: 20px auto;
+      }
+      a.up-add {
+        width: column-span(4,1);
+        float: left;
+        display: block;
+        background: url(../../images/icon-up-actions.png) no-repeat 5px -50px;
+        background-size: 20px auto;
+      }
+  }
+  .up-picture {
+    width: grid-span(4,1);
+    float: left;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-width: 0 1px 1px 0;
+  }
+ .up-name {
+    width: grid-span(4,1);
+    float: left;
+    font-size: 11px;
+    padding: 10px;
+    a {
+      color: #333;
+    }
+  }
+  .up-archetypes {
+    @include grid-span(8, last);
+    border-bottom: 1px solid #ccc;
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      li {
+        @include grid-span(4);
+        text-align: center;
+        text-transform: uppercase;
+        a {
+          color:#666;
+          font-size: .7rem;
+          font-weight: bold;
+          padding: 12px 0;
+          display: block;
+        }
+      [class^="icn"] {
+        display: block;
+        font-size: 2.3rem;
+      }
+      }
+      li.last {
+        @include grid-span(4, last);
+      }
+    }
+  }
+  .up-location {
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    font-size: 11px;
+    width: column-span(6,1);
+    float: left;
+    clear: left;
+    .up-label {
+      color: #999;
+    }
+  }
+  .up-birthday {
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    font-size: 11px;
+    width: column-span(6,1);
+    float: right;
+    .up-label {
+      color: #999;
+    }
+  }
+  .up-description {
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    font-size: 11px;
+    width: column-span(8,1);
+    float: left;
+  }
+  .up-list {
+    @include grid-span(12);
+    li {
+      width: grid-span(4,1);
+      float: left;
+      font-size: 10px;
+      white-space: nowrap;
+      text-align: center;
+      a {
+        padding: 5px 0;
+      }
+    }
+    li.last {
+      @include grid-span(4, last);
+    }
+  }
+  }
+}

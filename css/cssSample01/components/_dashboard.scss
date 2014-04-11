@@ -1,0 +1,22 @@
+@each $archetype in archetype-list() {
+  .daily-me-#{$archetype} {
+    background: transparent url('/img/static/dailyme/daily-me-header-#{$archetype}.png') no-repeat scroll left top;
+    background-size: contain;
+    height: 100%;
+    overflow: hidden;
+    text-indent: -9999em;
+    width: 100%;
+  }
+}
+
+// At a Glance graphics sprites
+$at-a-glance--sprite-dimensions: true;
+$at-a-glance--layout: smart;
+
+.at-a-glance--sprite {
+  display: block;
+  @include squish-text;
+}
+
+@import "cta/at-a-glance-/*.png";
+@include all-at-a-glance--sprites;

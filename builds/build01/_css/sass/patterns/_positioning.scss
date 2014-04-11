@@ -1,0 +1,31 @@
+/* patterns / positioning
+ *
+ * Sets pattern classes for use in making small adjustments to the position of elements
+ *
+ */
+
+.p-floatLeft {
+  float: left;
+}
+
+.p-floatRight {
+  float: right;
+}
+
+.p-centered {
+  text-align: center;
+}
+
+.p-horizontalList {
+    font-size: 0; // This addresses unwanted spacing between inline block positioned list items
+    & > * {
+      display: inline-block;
+      list-style-type: none;
+      font-size: $default-font-size;
+      margin: 0;
+    }
+}
+
+.p-clearfix {
+  @include clearfix;
+}

@@ -1,0 +1,49 @@
+// Article CSS
+.article-node { 
+  .archetype-name {
+    border-color: #ccc;
+    border-style: solid;
+    border-width: 1px 0;
+  }
+}
+.m-boards {
+  border: 2px solid #ccc;
+  h3 {
+    text-align: center;
+  }
+  .count {
+    float: right;
+    padding: 1%;
+    text-align: right;
+  }
+  .percentage {
+    display: inline-block;
+    padding: 2%;
+    width: 33%;
+  }
+  .original-me {
+    border-color: #ccc;
+    border-style: solid;
+    border-width: 1px 0;
+    text-align: center;
+  }
+  .user-board {
+    display: inline-block;
+    padding: 1%;
+    width: 24%;
+    span {
+      float: left;
+      font-size: 3rem;
+      margin-right: 1%;
+    }
+    p {
+      margin: 0;
+      width: 80%;
+    }
+  }
+}
+.article-tastemaker {
+  .archetype-name {
+    color: #00f;
+  } 
+}

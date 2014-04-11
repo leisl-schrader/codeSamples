@@ -1,0 +1,12 @@
+/* @partial base */
+
+/**
+ * Base partial required by other files and partials.
+ *
+ * This will not output any rule sets. It only holds custom functions, mixins
+ * and common variables. It should be imported into all Sass files.
+ */
+
+@import "base/functions";
+@import "base/mixins";
+@import "base/variables";

@@ -1,0 +1,55 @@
+// carousel
+
+.swipe {
+  overflow: hidden;
+  visibility: hidden;
+  position: relative;
+}
+.swipe-wrap {
+  overflow: hidden;
+  position: relative;
+  .node-teaser {
+    float:left;
+    width:100%;
+    position: relative;
+  }
+}
+
+.carousel-nav {
+  text-align: center;
+  button {
+    border: 0;
+    background: none;
+    vertical-align: middle;
+  }
+}
+
+.carousel-button-prev, .carousel-button-next {
+  color: #00f;
+  font-size: 1.5em;
+  padding: 0 2em;
+}
+
+// @todo remove extend.
+.carousel-button-prev {
+  @extend .icn;
+  @extend .icn--arrow-left;
+}
+
+.carousel-button-next {
+  @extend .icn;
+  @extend .icn--arrow-right;
+}
+
+.carousel-button-counter {
+  @extend .icn;
+  @extend .icn--circle;
+  color: #ccc;
+  font-size: 1em;
+  padding: 0 0.5em;
+  
+  &.active {
+    color: #00f;
+    font-size: 1.5em;
+  }
+}

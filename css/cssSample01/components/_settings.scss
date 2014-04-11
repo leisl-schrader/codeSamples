@@ -1,0 +1,56 @@
+@include layout (3) {
+  
+  .nav-settings {
+    [data-toggle="tab"] {
+      width: grid-span(1, 1);
+      &:last-child {
+        width: grid-span(1, 1, $gutter: 0);
+      }
+    }
+  }
+  
+  .form-modify-archetypes {
+  
+    @each $archetype in archetype-list() {
+      [data-archetype="#{$archetype}"] button.is-active {
+        background-color: archetype-color($archetype);
+        
+        .icn:before, span {
+          color: #fff;
+        }
+      }
+    }
+    
+    li {
+      border: 3px solid #ccc;
+      float: left;
+      margin-bottom: 5%;
+      position: relative;
+      //width: grid-span(1, 1, $gutter: 0);
+      width: 30%;
+      &:nth-of-type(3n-1) {
+        margin-left: 5%;
+        margin-right: 5%;
+      }
+    }
+    button {
+      background: none;
+      border: 0;
+      height: 100%;
+      padding: 0.5em;
+      width: 100%;
+    }
+    input[type="checkbox"] {
+      left: 0;
+      position: absolute;
+      top: 0;
+    }
+    .icn {
+      display: block;
+      font-size: 3rem;
+      margin-bottom: 0.1em;
+      vertical-align: middle;
+    }
+  }
+  
+}

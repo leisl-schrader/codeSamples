@@ -1,0 +1,299 @@
+// config / vars
+
+@import "compass/css3";
+
+$color-price-adjusted: #C00;
+$color-price-original: #666;
+$color-swatch-highlight: #88398E;
+
+$width-thumbnail--small: 141;
+$width-thumbnail: 179;
+$width-thumbnail--large: 245;
+$width-thumbnail--xlarge: 375;
+
+$height-thumbnail--small: 203;
+$height-thumbnail: 258;
+$height-thumbnail--large: 353;
+$height-thumbnail--xlarge: 540;
+
+$quickView-fontSizeAdjustment: 200;
+
+/* modules / productList
+ *
+ * Shows a grid of product image thumbnails and information summary, based on browse or search criteria.
+ *
+ */
+
+.m-productList {
+	*, *:before, *:after {
+	  -moz-box-sizing: border-box;
+	  -webkit-box-sizing: border-box;
+	  box-sizing: border-box;
+	}
+}
+
+// This selector applies to both the link in the thumbnail, and the link in the product name
+a.m-productList-link { 
+  text-decoration: none;
+  // TODO: remove these when refactoring front/back view. background-size not IE8 compatible.
+  background-position: center center;
+  background-size: contain !important;
+}
+
+/* modules / productThumbnail
+ *
+ * Shows a grid of small product images with basic information.
+ *
+ */
+
+/* default - 4 products per row */
+.m-productThumbnail {
+  display: inline-block;
+  margin: 0 -3px 15px 15px;
+  //min-height: 410px;
+  position: relative;
+  vertical-align: top;
+  width: #{$width-thumbnail}px;
+}
+
+.m-productThumbnail-image {
+  border: 1px solid #ccc;
+  display: block;
+  height: #{$height-thumbnail}px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+
+  img {
+    max-width: 100%;
+	// max-height: 100%; somehow gives us too large a value, so we're using px for now
+	max-height: #{$height-thumbnail}px;
+  }
+}
+
+/* 5 products per row */
+.m-productThumbnail--small {
+  @extend .m-productThumbnail;
+  //min-height: 355px;
+  width: #{$width-thumbnail--small}px;
+  .m-productThumbnail-image {
+	height: #{$height-thumbnail--small}px;
+	img {
+		max-height: #{$height-thumbnail--small}px;
+	}
+  }
+}
+
+/* 3 products per row */
+.m-productThumbnail--large {
+  @extend .m-productThumbnail;
+  //min-height: 480px;
+  width: #{$width-thumbnail--large}px;
+  .m-productThumbnail-image {
+	height: #{$height-thumbnail--large}px;
+	img {
+		max-height: #{$height-thumbnail--large}px;
+	}
+  }
+  // not adjusting the quick view button size thumbnail for now
+  //.m-quickView-link {
+  //  font-size: #{$width-thumbnail--large / $quickView-fontSizeAdjustment}em;
+  //}
+}
+
+/* 2 products per row */
+.m-productThumbnail--xlarge {
+  @extend .m-productThumbnail;
+  //min-height: 650px;
+  width: #{$width-thumbnail--xlarge}px;
+  .m-productThumbnail-image {
+	height: #{$height-thumbnail--xlarge}px;
+	img {
+		max-height: #{$height-thumbnail--xlarge}px;
+	}
+  }
+}
+
+/* modules / colorSwatchMenu
+ *
+ * Shows a menu on list pages to view available colors.
+ *
+ */
+
+.m-colorSwatchMenu {
+  background-color: #ccc;
+  display: none;
+  font-size: 11px;
+  padding: 0 3px;
+  width: 100%;
+  z-index: 99;
+}
+
+.m-colorSwatchMenu-count {
+  color: $color-swatch-highlight;
+}
+
+.m-colorSwatchMenu-show, 
+.m-colorSwatchMenu-hide {
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  cursor: pointer;
+  display: inline-block;
+  float: right; 
+  height: 0;
+  position: relative;
+  top: 3px;
+  width: 0;
+}
+
+.m-colorSwatchMenu-show {
+  border-top: 6px solid $color-swatch-highlight;
+  
+}
+
+.m-colorSwatchMenu-hide {
+   border-bottom: 6px solid $color-swatch-highlight;
+}
+
+.m-colorSwatchMenu-swatchWrapper {
+   background-color: #ccc;
+   cursor: pointer;
+   display: none;
+   left: 0;
+   padding: 2px 5px;
+   position: absolute;
+   width: 100%;
+   z-index: 99;
+}
+
+.m-colorSwatchMenu-swatch {
+  height: 20px;
+  width: 20px;
+}
+
+/* modules / productInfo
+ *
+ * Shows mostly text-based product data.
+ *
+ */
+ 
+.m-productInfo {
+  margin: 0.4em 0;
+}
+
+.m-productInfo-brand,
+.m-productInfo-name {
+  margin-bottom: 0.4em;
+}
+
+.m-productInfo-brand {
+  font-weight: bold;
+  //TODO: edit the markup buried in the .NET so this isn't needed
+  display: block;
+}
+
+// Hate to use an element selector, but I have to override a global style that is too specific.
+.m-productInfo-name {
+	a {
+		color: #036; 
+		text-decoration: none;
+		&:hover {
+			text-decoration:underline;
+		}
+	}
+}
+
+/* modules / pricingStory
+ *
+ * Formats different instances of product price and its adjustments.
+ *
+ */
+
+.m-pricingStory {
+
+	.e-price {
+		color: #000;
+	}
+
+	.e-price--adjusted {
+	  @extend .e-price;
+	  color: $color-price-adjusted;
+	}
+
+	.e-price--original {
+	  @extend .e-price;
+	  color: $color-price-original;
+	  text-decoration: line-through;
+	}
+
+	.e-price--savings {
+	  color: $color-price-adjusted;
+	}
+
+}
+
+/* modules / quickView
+ *
+ * Shows a miniature product detail popup directly from product list page.
+ *
+ */
+
+// Hate to use an element selector, but I have to override a global style that is too specific.
+.m-quickView-link {
+	@include border-radius(5px);
+	background-color: #E5E7E8;
+	border: 1px solid #646464;
+	bottom: 10px; 
+	color: #646464;
+	cursor: pointer;
+	display: none;
+	// height: 15%;
+	height: 24px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: #{$width-thumbnail / $quickView-fontSizeAdjustment}em;
+	left: 50%;
+	line-height: 100%;
+	margin-left: -44px;
+	//padding: 5%;
+	padding: 4px;
+	position: absolute;
+	text-decoration: none;
+	//width: 50%;
+	width: 88px;
+	z-index: 999;
+
+	.e-loadingContent {
+		display: none;
+	}
+
+	&.is-loading {
+	
+		.e-defaultContent {
+			display: none;
+		}
+
+		.e-loadingContent {
+			display: inline;
+		}
+	}
+}
+
+/* patterns / verticalCenter
+ *
+ * Vertically center a child element inside its parent
+ *
+ */
+
+.p-verticalCenter-outer {
+	display: table; 
+	height: 100%;
+	overflow: hidden;
+	width: 100%;
+}
+
+.p-verticalCenter-inner {
+	display: table-cell; 
+	vertical-align: middle;
+}
+
+// TODO: another method, which requires more divs but seems to work in situations where the above won't

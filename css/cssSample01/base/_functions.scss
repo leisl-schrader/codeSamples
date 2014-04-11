@@ -1,0 +1,79 @@
+/* @partial base/functions */
+
+
+// Returns the color for a given archetype.
+@function archetype-color($archetype) {
+  $result: null;
+  @each $item in archetype-data() {
+    @if $archetype == nth($item, 1) {
+      $result: nth($item, 2);
+    }
+  }
+  @if $result == null {
+    @warn "The archetype #{$archetype} is not known. Check your spelling or define the archetype within @function archetype-data.";
+  }
+
+  @return $result;
+}
+
+// Return all archetypes.
+@function archetype-list() {
+  $results: ();
+  @each $item in archetype-data() {
+    $results: append($results, nth($item, 1));
+  }
+  @return $results;
+}
+
+// Holds arechetypes, their colors and font glyphs.
+// Color variables held in base/variables/color.
+@function archetype-data() {
+  @return (
+    (advocate,      $base-color-advocate,     "\e00d"),
+    (athlete,       $base-color-athlete,      "\e005"),
+    (caregiver,     $base-color-caregiver,    "\e006"),
+    (creative,      $base-color-creative,     "\e004"),
+    (explorer,      $base-color-explorer,     "\e00c"),
+    (intellectual,  $base-color-intellectual, "\e009"),
+    (performer,     $base-color-performer,    "\e00a"),
+    (rebel,         $base-color-rebel,        "\e00e"),
+    (royal,         $base-color-royal,        "\e008"),
+    (spiritual,     $base-color-spiritual,    "\e003"),
+    (tastemaker,    $base-color-tastemaker,   "\e00b"),
+    (visionary,     $base-color-visionary,    "\e007")
+  );
+}
+
+// Convert absolute values to a relative rem values.
+@function rel($numbers) {
+  $results: ();
+  @each $number in $numbers {
+    $results: append($results, to-relative($number, $base-font-size, 'rem'));
+  }
+  @return $results;
+}
+
+// Converts an absolute value to a relative one.
+@function to-relative($number, $relative-to, $output-unit) {
+
+  @each $arg in (('$number' $number) ('$relative-to' $relative-to)) {
+    @if type_of(nth($arg, 2)) != number or relative-unit(nth($arg, 2)) {
+      @warn "#{nth($arg, 1)} = #{nth($arg, 2)} - Only absolute numeric values are accepted.";
+    }
+  }
+  @if $output-unit != "em" and $output-unit != "rem" and $output-unit != "%" {
+    @warn "$output-unit = #{$output-unit} - Only 'em', 'rem' or '%' are accepted.";
+  }
+
+  $result: strip-unit($number / $relative-to);
+  @if $output-unit == "%" {
+    $result: $result * 100;
+  }
+  @return unquote($result + if($result != 0, $output-unit, ''));
+}
+
+// Returns numeric values without a unit of measure.
+// @see https://github.com/nex3/sass/issues/533#issuecomment-11675408
+@function strip-unit($number) {
+  @return $number / ($number * 0 + 1);
+}

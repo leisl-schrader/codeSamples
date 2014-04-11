@@ -1,0 +1,19 @@
+/* @partial base/variables/dimensions */
+
+/**
+ * This file holds global variables related to dimensions.
+ */
+
+$base-width-profile-pane: 16em;
+
+// Predefined breakpoints and grid contexts.
+// @todo These are just placeholders.
+// Can this default to isolation? Floats multiplies rounding errors. 
+$output: 'float';
+
+$base-breakpoint-a: 480px;
+$base-breakpoint-b: 640px;
+$base-breakpoint-c: 960px;
+
+$grids: 6;
+$grids: add-grid(9 at $base-breakpoint-a);

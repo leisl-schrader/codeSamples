@@ -1,0 +1,51 @@
+// You me Modal
+
+$default-border-width: 1px;
+$default-border-style: solid;
+$default-border-color: $base-color-neutral;
+
+.youme-modal {
+  text-align: center;
+  h3 {
+    text-transform: uppercase;
+    margin: 0 0 20px;
+  }
+}
+.youme-modal-content {
+  padding: 20px;
+  @extend %default-border-bottom;
+  @include clearfix;
+  .youme-modal-content-image {
+        @include grid-span(2);
+      }
+  .youme-modal-content-title {
+        @include grid-span(4, last);
+        text-align: left;
+        h4 {
+          padding: 10px;
+          border: 1px solid #ccc;
+        }
+      }
+}
+.youme-modal-friends {
+  padding: 20px;
+  @extend %default-border-bottom;
+  input[type="text"] {
+    width: column-span(6,1);
+  }
+}
+.youme-modal-archetypes {
+  padding: 20px;
+  @extend %default-border-bottom;
+}
+.youme-modal-actions {
+  padding: 20px;
+  input[type="submit"] {
+    border: 0;
+    background: $default-border-color;
+    padding: 20px;
+    margin: 0 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}

@@ -1,0 +1,217 @@
+/* @partial placeholder */
+
+/**
+ * Placeholder partial for unknown rules or rules that are in transition.
+ *
+ * @todo This is temporary.
+ */
+
+a {
+  text-decoration: none;
+}
+
+// --- @todo What is this?
+[role="banner"] .title {
+  height: 71/12rem;
+  overflow: hidden;
+  text-indent: -9999em;
+}
+
+
+// --- @todo from config
+// Predefined breakpoints and grid contexts.
+// @todo These are just placeholders.
+// $output: 'float';
+// $bp-tablet: 500px;
+// $bp-me-item: $bp-tablet;
+// $grids: 6;
+// $grids: add-grid(9 at $bp-tablet);
+
+
+// -- @todo from theme/variables ?
+// Borders
+$default-border-width: 1px;
+$default-border-style: solid;
+$default-border-color: $base-color-neutral;
+
+%default-border-top {
+  border-top: $default-border-width $default-border-style $default-border-color;
+}
+%default-border-bottom {
+  border-bottom: $default-border-width $default-border-style $default-border-color;
+}
+%default-border-left {
+  border-left: $default-border-width $default-border-style $default-border-color;
+}
+
+@mixin style-sub-menu {
+  background-color: #fff;
+  border: 2px solid #000;
+}
+
+
+
+// --- @todo from defaults partial. misplaced.
+* {
+  @include box-sizing('border-box');
+}
+
+
+
+#{headings(all)} {
+  margin: 0;
+}
+
+a {
+  @include link-colors($base-color-link)
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul, ol {
+  @include no-bullet;
+  @include clearfix;
+  margin: 0;
+  padding: 0;
+}
+
+.section-title {
+  background: $section-title-bg;
+  color: $section-title-color;
+  @include font-size(12px);
+}
+
+.title {
+  text-transform: uppercase;
+  color: $base-color-b;
+}
+
+.category {
+  text-transform: uppercase;
+  padding-bottom: 0.5em;
+  font-size: 1rem;
+}
+
+
+// --- @todo from base/tables
+table {
+  max-width: 100%;
+  background-color: transparent;
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  border: $default-border-width $default-border-style $default-border-color;
+  border-collapse: separate;
+  *border-collapse: collapse;
+  border-left: 0;
+  @include border-radius;
+}
+
+th,
+td {
+  padding: 8px;
+  line-height: 20px;
+  text-align: left;
+  vertical-align: top;
+  border-top: 1px solid #dddddd;
+
+  // if border
+  border-left: 1px solid #dddddd;
+
+}
+
+th {
+  font-weight: bold;
+  vertical-align: bottom;
+}
+
+// without border
+.table caption + thead tr:first-child th,
+.table caption + thead tr:first-child td,
+.table colgroup + thead tr:first-child th,
+.table colgroup + thead tr:first-child td,
+.table thead:first-child tr:first-child th,
+.table thead:first-child tr:first-child td {
+  border-top: 0;
+}
+
+// with border
+.table-bordered caption + thead tr:first-child th,
+.table-bordered caption + tbody tr:first-child th,
+.table-bordered caption + tbody tr:first-child td,
+.table-bordered colgroup + thead tr:first-child th,
+.table-bordered colgroup + tbody tr:first-child th,
+.table-bordered colgroup + tbody tr:first-child td,
+.table-bordered thead:first-child tr:first-child th,
+.table-bordered tbody:first-child tr:first-child th,
+.table-bordered tbody:first-child tr:first-child td {
+  border-top: 0;
+}
+
+// -- @todo place holder. Remove.
+.fpo-img {
+  background: #ccc;
+  max-width: 100%;
+}
+
+
+// -- @todo from components/pages. refactor
+// General
+.breadcrumbs {
+  @extend %default-border-top;
+  @extend %default-border-bottom;
+  padding: 0.25% 0;
+  margin: 0;
+  text-transform: uppercase;
+  li {
+    float: left;
+
+    &:before {
+      content:"\\";
+      padding: 0 0.5em;
+    }
+
+    &:first-child:before{
+      content: "";
+    }
+  }
+  a {
+    text-decoration: none;
+  }
+}
+article {
+  .archetype-name {
+    padding-left: 10%;
+    text-transform: uppercase;
+  }
+}
+.cta {
+  background-color: $default-cta-color;
+  border: 0;
+  color: white;
+  display: inline-block;
+  font-weight: bold;
+  padding: 1% 10%;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  @include breakpoint (500px) {
+    padding: 0.5% 2%;
+  }
+  &.highlighted {
+
+    background-color: $highlighted-cta-color;
+
+    &:hover {
+      background-color: $base-color-link;
+    }
+  }
+
+  .icn {
+    margin-right: 0.5em;
+    vertical-align: baseline;
+  }
+}

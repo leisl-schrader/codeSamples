@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+body {
+	
+	font: 75% Arial, sans-serif;
+	color: #666666;
+	line-height: 130%;
+}
+
+h1 {
+	
+	margin-bottom: 10px;
+	font-size: 20px;
+	line-height: 110%;
+}
+
+h2 {
+	
+	margin-bottom: 15px;
+	font-size: 16px;
+}
+
+h3 {
+	
+}
+
+p {
+
+	margin-bottom: 15px;
+}
+
+ul {
+	
+	margin-left: 15px;	
+}
+
+a, a:active {
+	
+	color: #2d3f90;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a:hover {
+	
+	text-decoration: underline;
+}
+
+textarea {
+
+	font: 100% Arial, sans-serif;
+}
+
+sup {
+	
+	font-size: 80%;
+	position: relative;
+	top: -3px;
+	left: 1px;
+}
+
+.caption {
+
+	font-size: 9px;
+}
+
+.no-wrap {
+
+	white-space: nowrap;
+}

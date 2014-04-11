@@ -1,0 +1,45 @@
+/* @partial base/variables/colors */
+
+/**
+ * Color variables only.
+ *
+ * All color variables prefixed with $base-color-* since it's a base variable.
+ * Please maintain this convention.
+ */
+
+// Global colors
+$base-color-fg:       #333333;
+$base-color-bg:       #ffffff;
+$base-color-link:     #7695b7;
+$base-color-neutral:  #aaaaaa;
+$base-color-a:        #05537d;
+$base-color-b:        #ef4136;
+
+// Archetype Colors
+$base-color-advocate:     #2c973e;
+$base-color-athlete:      #ee7025;
+$base-color-caregiver:    #dc145a;
+$base-color-creative:     #eabd32;
+$base-color-explorer:     #5aaaaa;
+$base-color-intellectual: #006838;
+$base-color-performer:    #9390b4;
+$base-color-royal:        #692868;
+$base-color-spiritual:    #2787c9;
+$base-color-tastemaker:   #214ba0;
+$base-color-visionary:    #8f2f8b;
+$base-color-rebel:        #ef4136;
+
+
+// @todo move these.
+// 
+// Buttons
+$default-cta-color: #4f4f4f;
+$highlighted-cta-color: #05537d;
+
+// Tabs
+$tab-bg-color: $base-color-a;
+$tab-link-color-active: white;
+
+// Sections / Blocks Generic
+$section-title-bg: $base-color-a;
+$section-title-color: white;

@@ -1,0 +1,18 @@
+/* modules / footer
+ *
+ * Global site footer
+ *
+ */
+
+
+#l-footer {
+  padding: 1%;
+}
+
+.m-footer-nav-primary {
+
+  & > * {
+    font-size: 0.75em;
+    padding: 0.5em 1em;
+  }
+}

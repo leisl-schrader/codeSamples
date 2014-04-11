@@ -1,0 +1,18 @@
+/* @partial library/fonts */
+
+/**
+ * Font file imports and definition.
+ *
+ * Not to be used for setting styles.
+ */
+
+@include font-face(
+  $name: "Archetypes",
+  $font-files: font-files(
+    "Archetypes.woff", woff,
+    "Archetypes.ttf", truetype
+  ),
+  $eot: false,
+  $weight: normal,
+  $style: normal
+);

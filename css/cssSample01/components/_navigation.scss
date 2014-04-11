@@ -1,0 +1,145 @@
+/* @partial components/navigation */
+
+
+.nav {
+  text-transform: uppercase;
+}
+
+.nav-item {
+  display: inline-block;
+  /* inline-block causes spacing. Negate it with negative margins. */
+  margin-right: rel(-4px);
+  text-align: center;
+}
+
+.nav--archetypes {
+  .nav-item {
+    @include font-size(10px);
+    @include breakpoint ($base-breakpoint-a) {
+      @include font-size(12px);
+    }
+    border-style: solid;
+    /* Coordinated with padding and border dimensions in the active state. */
+    border-width: 0;
+    padding: rel(10px 1px 5px);
+    width: grid-span($span: 1, $location: 1, $grid: 4, $gutter: 0);
+    @include breakpoint ($base-breakpoint-a) {
+      width: grid-span($span: 1, $location: 1, $grid: 5, $gutter: 0);
+    }
+    @include breakpoint ($base-breakpoint-b) {
+      width: grid-span($span: 1, $location: 1, $grid: 7, $gutter: 0);
+    }
+    @include breakpoint ($base-breakpoint-c) {
+      width: grid-span($span: 1, $location: 1, $grid: 12, $gutter: 0);
+    }
+    &.is-active {
+      background-color: lighten($base-color-neutral, 20%);
+      border-width: rel(5px 1px 0);
+      padding: rel(5px 0 5px);
+    }
+  }
+  a {
+    color: darken($base-color-neutral, 20%);
+  }
+  .icn {
+    @include font-size(55px);
+    display: block;
+  }
+}
+
+.nav--sections,
+.nav--sections-menus {
+  /* This color will be inherited by border colors on child elements. */
+  color: darken($base-color-neutral, 10%);
+}
+
+.nav-item--section {
+  @include font-size(12px);
+  /* Changing archetype contexts will inherit its colors instead of going white. */
+  border-color: inherit;
+  border-style: solid;
+  border-width: rel(1px 1px 1px 0);
+  width: grid-span($span: 1, $location: 1, $grid: 3, $gutter: 0);
+  &:last-child {
+    border-right-width: 0;
+  }
+  a {
+    color: inherit;
+    display: block;
+    padding: rel(9px);
+     span, .icn {
+      display: block;
+      margin: rel(0 2px);
+      @include breakpoint ($base-breakpoint-a) {
+        display: inline;
+      }
+    }
+    .icn--arrow-down {
+      @include font-size(9px);
+      color: lighten($base-color-neutral, 20%);
+    }
+  }
+}
+
+.js {
+  .nav--sections-menus {
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+  }
+  .nav--sections-menu {
+    display: none;
+    &.is-active {
+      display: block;
+    }
+  }
+}
+
+.nav--sections-menu {
+  background-color: lighten($base-color-neutral, 30%);
+  border-style: solid;
+  border-width: rel(3px);
+  /* Menu items default to two columns.  */
+  .menu-item {
+    background-color: $base-color-bg;
+    border-color: $base-color-neutral;
+    border-style: solid;
+    border-width: rel(0 1px 1px 0);
+    &:nth-child(even) {
+      /* Loose right column right border. */
+      border-right-width: 0;
+    }
+    &:nth-last-child(-n+2) {
+      /* Last two items inherit archetype colors to show separation. */
+      border-bottom-color: inherit;
+    }
+    &:last-child {
+      /* Last item inherits right border color as well. */
+      border-right-color: inherit;
+    }
+    display: block;
+    float: left;
+    padding: rel(4px);
+    width: grid-span($span: 1, $location: 1, $grid: 2, $gutter: 0);
+  }
+  a {
+    color: inherit;
+    display: block;
+    padding: rel(0 10px);
+  }
+}
+
+.nav--section-close {
+  background-color: lighten($base-color-neutral, 30%);
+  border-style: solid;
+  border-width: rel(0 3px 3px);
+  color: inherit;
+  float: right;
+  margin-top: rel(-3px);
+  padding: rel(5px 10px);
+  width: grid-span($span: 1, $location: 1, $grid: 3, $gutter: 0);
+  display: none;
+  &.is-active {
+    display: block;
+  }
+}

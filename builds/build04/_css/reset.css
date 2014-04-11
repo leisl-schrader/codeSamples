@@ -1,3 +1,4 @@
+/* http://meyerweb.com/eric/tools/css/reset/ */
 /* v1.0 | 20080212 */
 
 html, body, div, span, applet, object, iframe,
@@ -6,7 +7,7 @@ a, abbr, acronym, address, big, cite, code,
 del, dfn, em, font, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
-dl, dt, dd, ol, ul, li,
+dl, dt, dd, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td {
 	margin: 0;
@@ -17,15 +18,22 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	vertical-align: baseline;
 	background: transparent;
 }
+
+ol {
+	
+	/*margin: 0;*/ /* any margin declaration on ol caused the numbers to be replaced by small squares in IE 6/7 - no clue why! */
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;	
+}
+
 body {
 	line-height: 1;
 }
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
+
 blockquote:before, blockquote:after,
 q:before, q:after {
 	content: '';

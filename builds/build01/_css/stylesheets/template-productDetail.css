@@ -1,0 +1,130 @@
+/* templates / productDetail
+ *
+ * Used on product detail pages
+ *
+ */
+/* patterns / cta
+ *
+ * Styles "call to action" buttons
+ *
+ */
+/* config / colors
+ *
+ * Sets colors in hex format
+ *
+ */
+.p-cta, .p-cta--affirmative, .p-cta--negative {
+  background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #0000ff), color-stop(100%, #000000));
+  background-image: -webkit-linear-gradient(left top, #0000ff, #000000);
+  background-image: -moz-linear-gradient(left top, #0000ff, #000000);
+  background-image: -o-linear-gradient(left top, #0000ff, #000000);
+  background-image: linear-gradient(left top, #0000ff, #000000);
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  -ms-border-radius: 1em;
+  -o-border-radius: 1em;
+  border-radius: 1em;
+  border: 0;
+  color: #fff;
+  font-weight: bold;
+  padding: 0.5em;
+}
+
+.p-cta--affirmative {
+  background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #000000), color-stop(100%, #ff0000));
+  background-image: -webkit-linear-gradient(left top, #000000, #ff0000);
+  background-image: -moz-linear-gradient(left top, #000000, #ff0000);
+  background-image: -o-linear-gradient(left top, #000000, #ff0000);
+  background-image: linear-gradient(left top, #000000, #ff0000);
+}
+
+.p-cta--negative {
+  background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #999999), color-stop(100%, #cccccc));
+  background-image: -webkit-linear-gradient(left top, #999999, #cccccc);
+  background-image: -moz-linear-gradient(left top, #999999, #cccccc);
+  background-image: -o-linear-gradient(left top, #999999, #cccccc);
+  background-image: linear-gradient(left top, #999999, #cccccc);
+}
+
+/* patterns / tabs
+ *
+ * Styles content separated into tab navigation
+ *
+ */
+/* config / vars
+ *
+ * Sets general global vars
+ *
+ */
+/* Dimensions vars */
+.p-tabs .e-tabLink {
+  -moz-border-radius-topleft: 1em;
+  -webkit-border-top-left-radius: 1em;
+  border-top-left-radius: 1em;
+  -moz-border-radius-topright: 1em;
+  -webkit-border-top-right-radius: 1em;
+  border-top-right-radius: 1em;
+  border: 2px solid blue;
+  display: inline-block;
+  padding: 0.25em 0.5em;
+}
+
+/* modules / productDetail
+ *
+ * Shows all information about a single product.
+ *
+ */
+.m-productDetail-images {
+  float: left;
+  margin-right: 2%;
+}
+
+.m-productDetail-info > * {
+  margin-bottom: 1em;
+}
+
+.m-productDetail-otherInfo {
+  margin-top: 1em;
+}
+
+/* modules / pricingStory
+ *
+ * Formats prices, sale prices, and clearance prices
+ *
+ */
+.m-pricingStory .e-price, .m-pricingStory .e-price--original, .m-pricingStory .e-price--savings {
+  font-weight: bold;
+}
+.m-pricingStory .e-price--original {
+  text-decoration: line-through;
+}
+.m-pricingStory .e-price--savings {
+  color: #f00;
+}
+
+/* modules / swatchSelection
+ *
+ * Shows all information about a single product.
+ *
+ */
+/* config / colors
+ *
+ * Sets colors in hex format
+ *
+ */
+/* config / vars
+ *
+ * Sets general global vars
+ *
+ */
+/* Dimensions vars */
+.m-swatchSelection .e-swatch, .m-swatchSelection .e-swatch--is-selected, .m-swatchSelection .e-swatch--unavailable {
+  display: inline-block;
+}
+.m-swatchSelection .e-swatch--is-selected {
+  border: 2px solid blue;
+}
+.m-swatchSelection .e-swatch--unavailable {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
+  opacity: 0.3;
+}

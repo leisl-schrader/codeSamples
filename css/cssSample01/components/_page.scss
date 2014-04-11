@@ -1,0 +1,101 @@
+/* @partial components/page */
+
+
+// Layout File
+// This file corresponds to SMACSS Layout file
+// Should only contain global structural elements
+// Regions, Sections, Asides etc
+// @todo This can be improved.
+
+.page-wrapper {
+  @extend %default-border-left;
+  box-shadow: -3px 0 7px rgba(0, 0, 0, 0.1);
+  position: relative;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  position: relative;
+  margin-left: -1px;
+  z-index: 1000;
+  &.is-active {
+    left: $base-width-profile-pane;
+  }
+}
+
+// Stuructural Elements
+.region-header {
+  @extend %default-border-bottom;
+  width: 100%;
+}
+
+.filters {
+  clear: both; // @hack on shop page
+}
+
+// Various Sections
+.shares {
+  @include clearfix;
+  .user-badge {
+    @include grid-span(3);
+    &:nth-child(2n) {
+      @include grid-span(3, 'last');
+    }
+  }
+}
+
+.featured .block {
+    @include grid-span(2);
+  &:last-child {
+    @include grid-span(2, 'last');
+  }
+}
+
+// About This Section
+// Title, subtitle, and description appear on each page describing
+// the contents of that page and/or section.
+.about-this-section {
+  display: none; // hidden on mobile
+  @include breakpoint($base-breakpoint-a) {
+    display: block;
+  }
+  .about-this-section-title,
+  .about-this-section-subtitle {
+      display: inline-block;
+    }
+
+  .about-this-section-subtitle {
+    font-style: italic;
+    font-weight: normal;
+  }
+}
+
+
+// Region Callout
+// Appears on /dashboard and /shop
+.region-callout {
+
+  overflow: hidden;
+  width: 100%;
+
+  .callout {
+    @include grid-span(2);
+    background: $base-color-b;
+    font-size: 2rem;
+    margin-bottom: -9999px;
+    padding-bottom: 9999px;
+    text-align: center;
+    text-transform: uppercase;
+    &:last-child {
+      @include grid-span(2, 'last');
+    }
+
+    a {
+      color: white;
+      display: block;
+      padding: 0.5em;
+    }
+
+  }
+}

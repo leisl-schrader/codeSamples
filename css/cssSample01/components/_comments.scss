@@ -1,0 +1,70 @@
+/* @partial components/comment */
+
+
+.comments {
+  position: relative;
+  clear: both;
+  h3 {
+    text-transform: uppercase;
+    padding: 0 0 20px;
+    margin: 0 0 20px;
+    @extend %default-border-bottom;
+    text-align: center;
+  }
+  .comment-count  {
+    float: right;
+    text-transform: uppercase;
+  }
+  .comment{
+    @include clearfix;
+    @extend %default-border-bottom;
+    position: relative;
+    font-size: .9rem;
+    margin: 0;
+    padding: 20px 0;
+    .content {
+      @include grid-span(5, last);
+    }
+    .author {
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+    .user-picture {
+      @include grid-span(1);
+      img {
+        height: auto;
+        width: 55px;
+      }
+    }
+    textarea.comment-box-text {
+      width: column-span(6,1);
+      padding: 10px;
+    }
+    button {
+      float: right;
+      text-transform: uppercase;
+      border: 0;
+      background: #999;
+      padding: 10px 20px;
+      margin-right: 10px;
+      font-weight: bold;
+      font-size: .9rem;
+      color: white;
+    }
+    .timestamp {
+      float: right;
+      color: #999;
+      font-size: .9rem;
+    }
+  }
+}
+.archetype-user-icons a {
+  background: url(../../images/icon_archetypes.png) no-repeat 0 -3880px;
+  display: inline-block;
+  height: 18px;
+  vertical-align: bottom;
+  width: 18px;
+  overflow: hidden;
+  text-align: left;
+  text-indent: -119988px;
+}

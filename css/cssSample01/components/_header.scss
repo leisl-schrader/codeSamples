@@ -1,0 +1,100 @@
+// Things that are in the header
+
+#header {
+  border-bottom: 1px solid #ccc;
+}
+
+.header-top {
+  text-align: center;
+  padding: 3%;
+  position: relative;
+  
+  .logo {
+    position: relative;
+    top: -0.25em;
+  }
+}
+
+
+#jump {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 37px;
+  padding: 10px 30px 10px 20px;
+  display: block;
+  text-decoration: none;
+  color: #666;
+  border-left: 1px solid #E8E8E8;
+  text-align: center;
+  background: #fff;
+}
+
+#btn-profile:link,
+#btn-profile:visited {
+  position: absolute;
+  left: 4%;
+  display: inline-block;
+  font-size: 2rem;
+}
+
+#btn-search  {
+  border: 1px solid #a0a4a3;
+  display: inline-block;
+  float: right;
+  line-height: 0%;
+  padding: 0.5em;
+  position: absolute;
+  right: 4%;
+  
+  .icn--search {
+    display: inline-block;
+  }
+  .icn--close {
+    display: none;
+  }
+  
+  &.close {
+    background-color: #ddd;
+    border: none;
+    color: #777;
+    font-size: 2em;
+    padding-bottom: 0.75em;
+    
+    .icn--search {
+      display: none;
+    }
+    .icn--close {
+      display: inline-block;
+    }
+  }
+}
+
+#search-block-form {
+  width: 100%;
+  background: #ddd;
+  text-align: right;
+  form {
+    padding: 10px;
+  }
+  input.form-text {
+    display: inline-block;
+    width: 100%;
+    border: 1px solid #ccc;
+    height: 24px;
+  }
+  input.form-submit {
+    position: absolute;
+    top: 10px;
+    right: 9px;
+    width: 20px;
+    background: #777;
+    border: 0;
+    color:#fff;
+    text-transform: uppercase;
+    height: 28px;
+    width: 40px;
+    font-size: 11px;
+    font-weight: bold;
+  }
+}

@@ -1,113 +1,230 @@
-<!doctype html>
-<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!-- Adds IE specific classes to the root element for better targeting IE specific styles -->
+    <head>
 
-  <!-- Use the .htaccess and remove these lines to avoid edge case issues.
-       More info: h5bp.com/i/378 -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Spiffy New OSP Group Product Detail Page</title> <!-- most important element for SEO -->
+        <meta name="description" content=""> <!-- not important for SEO, but still adds helpful info to search results. -->
 
-  <title></title>
-  <meta name="description" content="">
+        <meta charset="utf-8"> <!-- http://www.utf8everywhere.org/ -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> <!--  emulate latest version of IE, do not use Compatibility Mode -->
 
-  <!-- Mobile viewport optimized: h5bp.com/viewport -->
-  <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="width=device-width"><!-- on mobile devices, scale up or down to full screen size -->
 
-  <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
+        <link rel="stylesheet" href="_css/stylesheets/master.css"> <!-- styles for every page -->
+        <link rel="stylesheet" href="_css/stylesheets/template-productDetail.css"> <!-- styles for this page only -->
 
-  <link rel="stylesheet" href="_css/normalize.css">
-	<link rel="stylesheet" href="_css/html5bp.css">
-	<link rel="stylesheet" href="_plugins/mediaelement/build/mediaelementplayer.css">
-	<link rel="stylesheet" href="_css/style.css">
-	
-  <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
+        <script src="_js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script> <!-- Modernizr is the only js file to be called in the head -->
 
-  <!-- All JavaScript at the bottom, except this Modernizr build.
-       Modernizr enables HTML5 elements & feature detects for optimal performance.
-       Create your own custom Modernizr build: www.modernizr.com/download/ -->
-  <script src="_js/vendor/modernizr.custom.js"></script>
-</head>
-<body>
-  <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
-       chromium.org/developers/how-tos/chrome-frame-getting-started -->
-  <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
-  <header>
+    </head>
 
-  </header>
-	
-  <div role="main">
-	
-		<div id="phrase">
-			
-			<div id="phraseCTA">
-			
-				<p>
-					Click mistletoe to shuffle
-				</p>
-				
-			</div>
-		
-			<p id="phraseText">default text</p>
-		
-		</div>
-		
-		<div id="controls" class="clear-after">
-		
-			<div class="float-left">
-				<span id="makeYourOwnBack">
-					<img src="_img/back.png"> go back
-				</span>
-			</div>
-			
-			<button id="makeYourOwn">make<br>your own</button>
-			
-			<!--<button id="makeYourOwnBack" class="sm">go back</button>-->
-			
-			<button id="share" class="sm st_sharethis_custom" st_url="#" st_title="Digital Mistletoe">share</button>
-			
-			<div class="float-right">
-				<audio id="musicPlayer" src="_media/digibells.mp3" type="audio/mp3" controls="controls">		
-				</audio>
-			</div>
-			
-		</div>
+    <body id="template-productDetail" class="team01-sprint09"> <!-- ID for template scoping; sprint specific scope to work around CHM -->
 
-  </div>
-	
-  <footer>
-	
-		<img src="_img/dmLogo.png">
-		
-		<img src="_img/footerText.png" alt="Share some. Get some. Find the perfect sentiment to share with that special someone(s).">
-	
-		<a href="http://www.scopemouthwash.com">
-			<img src="_img/scopeLogo.png">
-		</a>
+        <header id="l-header">
 
-  </footer>
+            <div class="p-clearfix">
+
+                <h1 class="e-title">OneStopPlus.com</h1>
+
+                <form class="m-header-searchForm">
+                    <input type="text" placeholder="Enter Text Here">
+                    <input type="submit" value="Search">
+                </form>
+
+            </div>
+
+            <nav class="m-header-nav">
+                <ul class="m-header-nav-primary p-horizontalList">
+                    <li class="p-dropdownMenu-primary">
+                        <a class="e-rootCat-link" href="#">Women's</a>
+
+                        <ul class="m-header-nav-secondary p-dropdownMenu-secondary">
+                            <li>
+                                <a href="#">Skirts</a>
+                            </li>
+                            <li>
+                                <a href="#">Dresses</a>
+                            </li>
+                            <li>
+                                <a href="#">Jewelry</a>
+                            </li>
+                            <li>
+                                <a href="#">Other Womanly Products</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="p-dropdownMenu-primary">
+                        <a class="e-rootCat-link" href="#">Men's</a>
+
+                        <ul class="m-header-nav-secondary p-dropdownMenu-secondary">
+                            <li>
+                                <a href="#">Polo Shirts</a>
+                            </li>
+                            <li>
+                                <a href="#">Sweatpants</a>
+                            </li>
+                            <li>
+                                <a href="#">Fancy Watches</a>
+                            </li>
+                            <li>
+                                <a href="#">Other Manly Products</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="p-dropdownMenu-primary">
+                        <a class="e-rootCat-link" href="#">Home</a>
+
+                        <ul class="m-header-nav-secondary p-dropdownMenu-secondary">
+                            <li>
+                                <a href="#">Chairs</a>
+                            </li>
+                            <li>
+                                <a href="#">Tables</a>
+                            </li>
+                            <li>
+                                <a href="#">Lamps</a>
+                            </li>
+                            <li>
+                                <a href="#">Other Homely Products</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="p-dropdownMenu-primary">
+                        <a class="e-rootCat-link" href="#">Clearance</a>
+
+                        <ul class="m-header-nav-secondary p-dropdownMenu-secondary">
+                            <li>
+                                <a href="#">Slightly imperfect</a>
+                            </li>
+                            <li>
+                                <a href="#">Just kind of ugly</a>
+                            </li>
+                            <li>
+                                <a href="#">Stuff no one wants</a>
+                            </li>
+                            <li>
+                                <a href="#">Other Products we can't sell</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+        </header><!-- end #l-header -->
+
+        <div id="l-promo" class="p-clearfix">
+            99.5% Off! Buy buy buy!
+        </div><!-- end #l-promo -->
+
+        <div id="l-content" class="p-clearfix">
+
+                <article class="m-productDetail-info" class="p-clearfix">
+                    <section class="m-productDetail-images">
+                        <img src="http://placekitten.com/400/600" alt="">
+                        <div class="m-productDetail-subImages">
+                            <img src="http://placekitten.com/100/100" alt="">
+                            <img src="http://placekitten.com/100/100" alt="">
+                            <img src="http://placekitten.com/100/100" alt="">
+                        </div>
+                    </section>
+                    <header>
+                        <h1 class="m-productDetail-name">Name of Product</h1>
+                        <div class="m-pricingStory">
+                            <h2 class="e-price--original">Was $9999.99</h2>
+                            <h2 class="e-price">Now $1999.99</h2>
+                            <h2 class="e-price--savings">You Save $8000.00</h2>
+                        </div>
+                    </header>
+
+                    <section class="m-swatchSelection">
+
+                        <h3>Choose your Color</h3>
+                        <div class="e-swatch">
+                            <img src="http://placekitten.com/25/25" alt="">
+                        </div>
+                        <div class="e-swatch--is-selected">
+                            <img src="http://placekitten.com/25/25" alt="">
+                        </div>
+                        <div class="e-swatch--unavailable">
+                            <img src="http://placekitten.com/25/25" alt="">
+                        </div>
+
+                    </section>
+                    <footer>
+                        <button class="p-cta">Add to Cart</button>
+                    </footer>
+                    <footer>
+                    <button class="p-cta--negative">Cancel</button>
+                    <button class="p-cta--affirmative">OK</button>
+                </footer>
+                </article>
+
+                <div class="m-chmZone">
+                    Some of this content was added via Chameleon.
+                </div>
+
+                <aside class="m-productDetail-otherInfo p-tabs">
+                    <ul class="e-tabLinks p-horizontalList">
+                        <li>
+                            <a class="e-tabLink" href="#p-tabs-description">Description</a>
+                        </li>
+                        <li>
+                            <a class="e-tabLink" href="#p-tabs-sizeChart">Size Chart</a>
+                        </li>
+                        <li>
+                            <a class="e-tabLink" href="#p-tabs-reviews">Reviews</a>
+                        </li>
+                    </ul>
+
+                    <!-- Note: This is a special case of needing IDs, so that the tab links above can reveal the appropriate content
+                    In a full implementiation we'd use it for hide/show  -->
+                    <div id="p-tabs-description" class="e-tabContent">
+                        <p>
+                            This is the product description.
+                        </p>
+
+                        <div class="m-chmZone">
+                            Some of this content was added via Chameleon.
+                        </div>
+
+                    </div>
+                    <div id="p-tabs-sizeChart" class="e-tabContent">
+                        <p>
+                            This is the size chart.
+                        </p>
+                    </div>
+                    <div id="p-tabs-reviews" class="e-tabContent">
+                        <p>
+                            This is the reviews.
+                        </p>
+                    </div>
+                </aside>
 
 
-  <!-- JavaScript at the bottom for fast page loading -->
+        </div> <!-- end #l-content -->
 
-  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script src="_js/vendor/jquery-1.8.3.min.js"><\/script>')</script>
-  <script src="_js/plugins.js"></script>
-	<script src="_plugins/mediaelement/build/mediaelement-and-player.min.js"></script>
-  <script src="_js/main.js"></script>
-	
-	<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-	<script type="text/javascript">
-		stLight.options({publisher: "adba2cee-6802-4b9b-a559-38c5f6199136", onhover: false, shorten:false});
-	</script>
-	
-	<script src="_js/main2.js"></script>
-  <!-- end scripts -->
+        <footer id="l-footer" class="p-clearfix">
 
-</body>
+            <nav class="m-footer-nav">
+                <ul class="p-horizontalList m-footer-nav-primary">
+                    <li><a href="#">Women's</a></li>
+                    <li><a href="#">Men's</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Clearance</a></li>
+                    <li><a href="#">Customer Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </nav>
+
+        </footer> <!-- end #l-footer -->
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script> <!-- load jQuery from external source -->
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script> <!-- if the above fails, load jQuery from local source -->
+
+        <script src="js/plugins.js"></script> <!-- All 3rd party plugins go here -->
+        <script src="js/main.js"></script> <!-- All internally created JS goes here -->
+    </body>
 </html>

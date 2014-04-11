@@ -1,0 +1,22 @@
+/* patterns / tabs
+ *
+ * Styles content separated into tab navigation
+ *
+ */
+
+@import "config/vars";
+
+.p-tabs {
+
+  .e-tabLink {
+    @include border-top-radius(1em);
+    border: $default-border-width solid $default-main-color;
+    display: inline-block;
+    padding: 0.25em 0.5em;
+  }
+
+  .e-tabContent {
+
+  }
+
+}

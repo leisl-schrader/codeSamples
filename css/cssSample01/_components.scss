@@ -1,0 +1,40 @@
+/* @partial sections */
+
+/**
+ * Larger components broken down into relevant areas.
+ */
+
+@import "components/page";
+@import "components/profile";
+
+// Components, Modules
+// @todo/@hack Having issues with Singularity grid-span include applying to partials
+// Putting the file above the rest applies all context-overides
+// Try moving your partial order if you are experiencing any issues
+@import "components/navigation";
+@import "components/user-badge";
+@import "components/shop";
+@import "components/node";
+
+@import "components/archepedia";
+@import "components/article";
+@import "components/carousel";
+@import "components/comments";
+@import "components/footer";
+@import "components/forms";
+@import "components/header";
+@import "components/home";
+@import "components/me-board";
+@import "components/dashboard";
+
+@import "components/share";
+@import "components/tabs";
+@import "components/youmemodal";
+@import "components/archetypes-grid";
+@import "components/unloggedin";
+@import "components/poll";
+
+@import "components/friends";
+@import "components/settings";
+@import "components/show";
+@import "components/episode";

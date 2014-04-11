@@ -1,0 +1,24 @@
+/* modules / productDetail
+ *
+ * Shows all information about a single product.
+ *
+ */
+
+.m-productDetail-images {
+  float: left;
+   margin-right: 2%;
+}
+
+.m-productDetail-subImages {
+
+}
+
+.m-productDetail-info {
+  & > * {
+    margin-bottom: 1em;
+  }
+}
+
+.m-productDetail-otherInfo {
+  margin-top: 1em;
+}

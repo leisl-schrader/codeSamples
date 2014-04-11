@@ -1,0 +1,14 @@
+/* patterns / dropdownMenu
+ *
+ * A navigation pattern to show a secondary menu under a primary menu
+ *
+ */
+
+.p-dropdownMenu-secondary {
+  display: none;
+  position: absolute;
+}
+
+.p-dropdownMenu-primary:hover .p-dropdownMenu-secondary {
+  display: block;
+}

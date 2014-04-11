@@ -1,0 +1,38 @@
+/* @partial library/defaults */
+
+/**
+ * This file holds the default element styling.
+ *
+ * Do not use class selectors. This should hold the bare baseline minimum.
+ * Rules are imported from Normalize. If there are a set of rules that are not
+ * needed or end-up being extensively overridden, remove the import and place
+ * the element style in this file.
+ */
+
+// Normalize Version Comment
+@import 'normalize-version';
+
+// Normalize Partial Imports
+@import 'normalize/html5';
+@import 'normalize/base';
+@import 'normalize/links';
+@import 'normalize/typography';
+@import 'normalize/lists';
+@import 'normalize/embeds';
+@import 'normalize/figures';
+@import 'normalize/forms';
+@import 'normalize/tables';
+
+
+html {
+  font-family: $base-font-family;
+  /* rem and rel() function calculation is based on what's set here. */
+  font-size: 100% * ($base-font-size / 16px);
+}
+
+body {
+  /* Establish a vertical rhythm unit using $base-line-height. */
+  @include adjust-leading-to(1);
+  background-color: $base-color-bg;
+  color: $base-color-fg;
+}

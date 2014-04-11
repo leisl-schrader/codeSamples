@@ -1,0 +1,45 @@
+// Poll css
+.poll-container {
+  .poll-image {
+    text-align: center;
+    margin: 0 0 10px;
+  }
+  .poll-date {
+    font-size: .9rem;
+    margin: 0 0 10px;
+  }
+  .poll-title {
+    font-family: $base-font-family-serif;
+    font-size: 2rem;
+  }
+  .poll-answers {
+    margin: 0 0 10px;
+    @extend %default-border-bottom;
+  }
+  .poll-answer {
+    padding: 15px;
+    background: #eee;
+  }
+  h1 {
+    margin: 0 0 10px;
+    font-weight: normal;
+  }
+}
+.poll-board {
+  padding: 10px;
+  margin: 0 0 10px;
+  @extend %default-border-bottom;
+  @include clearfix;
+  h2 {
+    text-transform: uppercase;
+  }
+  .count {
+    float: right;
+  }
+}
+.poll-original-poster {
+  text-align: center;
+  padding: 10px;
+  margin: 0 0 10px;
+  @extend %default-border-bottom;
+}

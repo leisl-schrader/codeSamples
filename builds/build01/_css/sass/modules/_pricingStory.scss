@@ -1,0 +1,23 @@
+/* modules / pricingStory
+ *
+ * Formats prices, sale prices, and clearance prices
+ *
+ */
+
+.m-pricingStory {
+
+  .e-price {
+    font-weight: bold;
+  }
+
+  .e-price--original {
+    @extend .e-price;
+    text-decoration: line-through;
+  }
+
+  .e-price--savings {
+    @extend .e-price;
+    color: #f00;
+  }
+
+}

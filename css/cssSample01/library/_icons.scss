@@ -1,0 +1,206 @@
+/* @partial/icns */
+
+/**
+ * File includes font and image based sprite icons.
+ */
+
+/* Base `.icn` component must be set to all `.icn--*` items. */
+.icn {
+  font-family: 'Archetypes';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  // @note Webkit text rendering tends to slightly thicken the fonts. For some
+  // icons it will obscure the details. Forcing antialiasing to thin it down.
+  // Do not apply this to normal text since it prevent sub-pixel rendering.
+  -webkit-font-smoothing: antialiased;
+}
+
+/* .icn sub-component. */
+.icn-label {
+  @include squish-text;
+}
+
+/* Optionally set content from html5 data attribute. */
+[data-icon] {
+  @extend .icn;
+  &:before {
+    content: attr(data-icon);
+  }
+}
+
+/* Generic fill. Use class combinators for specific symbol fill shapes. */
+.icn-fill {
+  &:before {
+    position: relative;
+  }
+  &:after {
+    color: lighten($base-color-neutral, 30%);
+    margin-left: -1em;
+  }
+}
+
+/* Archetype icons */
+@each $archetype in archetype-data() {
+  .icn--#{nth($archetype, 1)} {
+    &:before {
+      color: nth($archetype, 2);
+      content: nth($archetype, 3);
+    }
+    &.icn-fill:after {
+      content: "\e022";
+    }
+  }
+}
+
+/* General icons */
+.icn--you:before {
+  content: "\e00f";
+}
+.icn--search:before {
+  content: "\e010";
+}
+.icn--shop:before {
+  content: "\e011";
+}
+.icn--activity:before {
+  content: "\e012";
+}
+.icn--add:before {
+  content: "\e013";
+}
+.icn--arrow-alt-down:before {
+  content: "\e014";
+}
+.icn--arrow-alt-left:before {
+  content: "\e015";
+}
+.icn--arrow-alt-right:before {
+  content: "\e016";
+}
+.icn--arrow-alt-up:before {
+  content: "\e017";
+}
+.icn--arrow-bend-right:before {
+  content: "\e018";
+}
+.icn--arrow-down:before {
+  content: "\e019";
+}
+.icn--arrow-left:before {
+  content: "\e01a";
+}
+.icn--arrow-narrow-left:before {
+  content: "\e01c";
+}
+.icn--arrow-narrow-right:before {
+  content: "\e01d";
+}
+.icn--arrow-right:before {
+  content: "\e01f";
+}
+.icn--arrow-up:before {
+  content: "\e020";
+}
+.icn--attachment:before {
+  content: "\e021";
+}
+.icn--circle:before {
+  content: "\e022";
+}
+.icn--clock:before {
+  content: "\e02a";
+}
+.icn--close:before {
+  content: "\e02b";
+}
+.icn--comment:before {
+  content: "\e02c";
+}
+.icn--flag:before {
+  content: "\e02d";
+}
+.icn--friend:before {
+  content: "\e02e";
+}
+.icn--friends:before {
+  content: "\e02f";
+}
+.icn--help:before {
+  content: "\e029";
+}
+.icn--location:before {
+  content: "\e028";
+}
+.icn--mail:before {
+  content: "\e027";
+}
+.icn--me:before {
+  content: "\e026";
+}
+.icn--photo:before {
+  content: "\e024";
+}
+.icn--play:before {
+  content: "\e023";
+}
+.icn--settings:before {
+  content: "\e025";
+}
+.icn--share:before {
+  content: "\e030";
+}
+.icn--arrow-narrow-down:before {
+  content: "\e000";
+}
+.icn--arrow-narrow-up:before {
+  content: "\e001";
+}
+.icn--discover:before {
+  content: "\e002";
+}
+.icn--more:before {
+  content: "\e01b";
+}
+.icn--write:before {
+  content: "\e031";
+}
+.icn--close-alt:before {
+  content: "\e01e";
+}
+.icn--arrow-lg-up:before {
+  content: "\e032";
+}
+.icn--community:before {
+  content: "\e033";
+}
+.icn--friend-action:before {
+  content: "\e034";
+}
+.icn--newsstand:before {
+  content: "\e035";
+}
+.icn--profile:before {
+  content: "\e036";
+}
+.icn--plus:before {
+  content: "\e037";
+}
+
+
+// icon sprites.
+$icn-sp--sprite-dimensions: true;
+$icn-sp--layout: smart;
+
+/* Base `.icn-sp` component must be set to all `.icn-sp--*` items. */
+.icn-sp {
+  @include squish-text;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@import "icn-sp-/*.png";
+@include all-icn-sp--sprites;

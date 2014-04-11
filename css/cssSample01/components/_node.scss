@@ -1,0 +1,89 @@
+[class*="node-teaser"] {
+  @include clearfix;
+}
+
+.node-teaser--activity {
+  @extend %default-border-top;
+  &:nth-of-type(1) {
+    border-top: none;
+  }
+}
+
+.node-teaser--community {
+  width: column-span(3,1) !important;
+}
+
+.node-teaser {
+  .media {
+    @include grid-span(3);
+    .featured & {
+     @include grid-span(6);
+    }
+  }
+  .meta {
+    @include grid-span(3, 'last');
+    .featured & {
+       @include grid-span(6);
+    }
+  }
+}
+
+.node-teaser--activity{
+  .media {
+    @include grid-span(2);
+    padding: 10px;
+  }
+  .meta {
+    position: relative;
+    @include grid-span(4, 'last');
+    padding: 10px 10px 10px 0;
+    .button-close {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      display: none;
+      font-weight: bold;
+      a {
+        color: #999;
+      }
+    }
+    .activity-notice {
+      font-size: .8rem;
+      color: #999;
+      margin: 0 0 5px;
+    }
+    .activity-text {
+    }
+    .activity-accept {
+      button {
+        text-transform: uppercase;
+        border: 1px solid #999;
+        background: #999;
+        padding: 10px 0;
+        margin-right: 10px;
+        font-weight: bold;
+        font-size: .9rem;
+        color: white;
+        @include grid-span(3, last);
+      }
+      button.activity-ignore {
+        background: white;
+        color: #999;
+        @include grid-span(3);
+      }
+    }
+    .icn--suggested {
+    }
+    .activity-timestamp {
+      position: absolute;
+      top: 5px;
+      right: 15px;
+      font-size: .9rem;
+      color: #999;
+    }
+  }
+  :hover .button-close {
+    display: block;
+    cursor: pointer;
+  }
+}

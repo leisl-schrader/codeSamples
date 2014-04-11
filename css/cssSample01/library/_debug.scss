@@ -1,0 +1,12 @@
+/* @partial library/debug */
+
+$debug-enable-all: false !default;
+$debug-enable-vertical-rhythm: $debug-enable-all !default;
+$debug-select: body !default;
+$debug-select-vertical-rhythm: $debug-select !default;
+
+@if $debug-enable-vertical-rhythm {
+  #{$debug-select-vertical-rhythm} {
+    @include baseline-grid-background(rel($base-line-height), rgba(255, 200, 200, .5));
+  }
+}

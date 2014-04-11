@@ -1,0 +1,13 @@
+// share
+#share-buttons {
+  display: inline-block;
+  vertical-align: middle;
+  .share-me, .share-you {
+    display: inline-block;
+    font-size: 2rem;
+    vertical-align: middle;
+  }
+  .number {
+    display: inline-block;
+  }
+}

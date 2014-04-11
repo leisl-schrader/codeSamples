@@ -1,0 +1,28 @@
+/* patterns / cta
+ *
+ * Styles "call to action" buttons
+ *
+ */
+
+@import "compass/css3";
+
+@import "config/colors";
+
+.p-cta {
+  @include background-image(linear-gradient(left top, $default-main-color, #000));
+  @include border-radius(1em);
+  border: 0;
+  color: #fff;
+  font-weight: bold;
+  padding: 0.5em;
+}
+
+.p-cta--affirmative {
+  @extend .p-cta;
+  @include background-image(linear-gradient(left top, darken($default-promo-bg-color, 50%), $default-promo-bg-color));
+}
+
+.p-cta--negative {
+  @extend .p-cta;
+  @include background-image(linear-gradient(left top, #999, #ccc));
+}

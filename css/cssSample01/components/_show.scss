@@ -1,0 +1,19 @@
+// Show css
+.show-node-teaser {
+  margin: 10px;
+  .field-video {
+    background: #ccc;
+    padding: 10px;
+    margin: 0 0 10px;
+  }
+  .title {
+    font-family: $base-font-family-serif;
+    color: $base-color-fg;
+    text-transform: none;
+    font-size: 1.5rem;
+    margin: 0 0 10px;
+  }
+  .field-body {
+    clear: both;
+  }
+}

@@ -1,0 +1,29 @@
+/* modules / swatchSelection
+ *
+ * Shows all information about a single product.
+ *
+ */
+
+@import "compass/css3";
+
+@import "config/colors";
+
+@import "config/vars";
+
+.m-swatchSelection {
+
+  .e-swatch {
+    display: inline-block;
+  }
+
+  .e-swatch--is-selected {
+    @extend .e-swatch;
+    border: $default-border-width solid $default-main-color;
+  }
+
+  .e-swatch--unavailable {
+    @extend .e-swatch;
+    @include opacity(0.3);
+  }
+
+}

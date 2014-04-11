@@ -1,0 +1,17 @@
+// Friend Requests
+
+@include layout(4) {
+
+  .social-networks {
+    
+    text-align: center;
+    
+    li {
+      float: left;
+      width: grid-span(1, 1);
+      &:last-child {
+        width: column-span(1, 1);
+      }
+    }
+  }
+}
