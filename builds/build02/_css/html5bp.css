@@ -98,7 +98,7 @@ sub { bottom: -0.25em; }
    Lists
    ========================================================================== */
 
-ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
+ul, ol { padding: 0 0 0 40px; }
 dd { margin: 0 0 0 40px; }
 nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
 
@@ -290,4 +290,35 @@ td { vertical-align: top; }
   @page { margin: 0.5cm; }
   p, h2, h3 { orphans: 3; widows: 3; }
   h2, h3 { page-break-after: avoid; }
+}
+
+/* End HTML5 Boilerplate */
+
+/* jQuery text shadow plugin - https://github.com/heygrady/textshadow */
+
+.ui-text-shadow, .ui-text-shadow-original {
+  position: relative;
+}
+.ui-text-shadow-original {
+  z-index: 1;
+  text-shadow: none;
+}
+.ui-text-shadow-copy {
+  position: absolute;
+  z-index: 0;
+  
+  line-height: 110.74235%; /* fixes #9 */
+
+  /* default positioning */
+  left: 0;
+  top: 0;
+  zoom: 1; /* fixes #8 in IE7 and below */
+  
+  /* turn off shadow */
+  text-shadow: none;
+  
+  /* turn off selection */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }

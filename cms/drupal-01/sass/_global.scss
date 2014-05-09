@@ -1,0 +1,621 @@
+/* Rule Order:
+ * Positioning 
+ * Display & Box Model 
+ * Font, Color, etc. */
+
+/* ==========================================================================
+   Sass variables 
+   ========================================================================== */
+
+/* Colors 
+   ========================================================================== */
+
+$main-color: #bfbfbf;
+$darkest-color: #000;
+$lightest-color: #fff;
+$mid-color: #666;
+$mid-dark-color: #333;
+$mid-light-color: #999;
+
+$web-section-color: #0015FF;
+$print-section-color: #C8252C;
+$identity-section-color: #4D5C87;
+$info-section-color: #008202;
+$contact-section-color: #F08000;
+$blog-section-color: #FFF8C5;
+
+/* Media queries 
+ * Source: https://gist.github.com/anthonyshort/2028061
+   ========================================================================== */
+
+$mq-mobile-portrait: 320px !default;
+$mq-mobile-landscape: 480px !default;
+$mq-tablet-portrait: 768px !default;
+$mq-tablet-landscape: 1024px !default;
+$mq-desktop: 1382px !default;
+
+// Both portrait and landscape
+@mixin mobile-only {
+  @media (max-width : $mq-mobile-landscape) {
+    @content;
+  }
+}
+
+// Everything up to and including the portrait width of the phone
+// Since it's the smallest query it doesn't need a min
+@mixin mobile-portrait-only {
+  @media (max-width : $mq-mobile-portrait) {
+    @content;
+  }
+}
+
+// Everything up to and including the mobile portrait
+@mixin mobile-portrait-and-below {
+  @media (max-width : $mq-mobile-portrait) {
+    @content;
+  }
+}
+
+// Everything above and including the mobile portrait
+@mixin mobile-portrait-and-up {
+  @media (min-width : $mq-mobile-portrait) {
+    @content;
+  }
+}
+
+// Everthing larger than a portrait mobile up until mobile landscape
+@mixin mobile-landscape-only {
+  @media only screen and (min-width : $mq-mobile-portrait + 1) and (max-width : $mq-mobile-landscape) {
+    @content;
+  }
+}
+
+// Everything up to and including the mobile landscape width
+@mixin mobile-landscape-and-below {
+  @media only screen and (max-width : $mq-mobile-landscape) {
+    @content;
+  }
+}
+
+// Everything above and including the mobile landscape width
+@mixin mobile-landscape-and-up {
+  @media only screen and (min-width : $mq-mobile-portrait + 1) {
+    @content;
+  }
+}
+
+// Both the portrait and landscape width of the tablet
+// Larger than a landscape mobile but less than or equal to a landscape tablet
+@mixin tablet-only {
+  @media only screen and (min-width : $mq-mobile-landscape + 1) and (max-width : $mq-tablet-landscape) {
+    @content;
+  }
+}
+
+// Everything larger than mobile landscape up until the portrait width of the tablet
+@mixin tablet-portrait-only {
+  @media only screen and (min-width : $mq-mobile-landscape + 1) and (max-width : $mq-tablet-portrait) {
+    @content;
+  }
+}
+
+// Everything below and including the portrait width of the tablet
+@mixin tablet-portrait-and-below {
+  @media only screen and (max-width : $mq-tablet-portrait) {
+    @content;
+  }
+}
+
+// Everything above and including the portrait width of the tablet
+@mixin tablet-portrait-and-up {
+  @media only screen and (min-width : $mq-mobile-landscape + 1) {
+    @content;
+  }
+}
+
+// Larger than portrait but less than or equal to the landscape width
+@mixin tablet-landscape-only {
+  @media only screen and (min-width : $mq-tablet-portrait + 1) and (max-width : $mq-tablet-landscape) {
+    @content;
+  }
+}
+
+// Up to and including the tablet landscape
+@mixin tablet-landscape-and-below {
+  @media only screen and (max-width : $mq-tablet-landscape) {
+    @content;
+  }
+}
+
+// Everything larger than portrait tablet
+@mixin tablet-landscape-and-up {
+  @media only screen and (min-width : $mq-tablet-portrait + 1) {
+    @content;
+  }
+}
+
+// Everything larger than a landscape tablet
+@mixin desktop-and-up {
+  @media only screen and (min-width : $mq-tablet-landscape + 1) {
+    @content;
+  }
+}
+
+// Everything below and including the desktop 
+@mixin desktop-and-below {
+  @media only screen and (max-width : $mq-desktop) {
+    @content;
+  }
+}
+
+// Everything larger than a landscape tablet but less than or equal to the desktop
+@mixin desktop-only {
+  @media only screen and (min-width : $mq-tablet-landscape + 1) and (max-width : $mq-desktop) {
+    @content;
+  }
+}
+
+// Retina screens have a 1.5 pixel ratio, not 2
+@mixin retina {
+  @media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
+    @content;
+  }
+}
+
+/* ==========================================================================
+   Sass mixins 
+   ========================================================================== */
+
+@mixin default-link-hover-style {
+  
+  &:hover {
+    color: $darkest-color;
+    background-color: $lightest-color;
+  }
+}
+
+/* ==========================================================================
+   Sass functions 
+   ========================================================================== */
+
+@function get-pct($target, $container) {
+  @return ($target / $container) * 100%;
+}
+
+/* ==========================================================================
+   Base Rules (includes typography)
+   ========================================================================== */
+
+body {
+  font: 75%/150% Verdana, Helvetica, Arial, sans-serif;
+  color: $darkest-color;
+  background-color: $main-color;
+}
+
+h1 {
+  font-size: 300%;
+  line-height: 100%;
+  margin-bottom: 2%;
+}
+
+h2 {
+  font-size: 200%;
+  line-height: 100%;
+}
+
+h3 {
+  margin-bottom: 0.5%;
+  font-size: 150%;
+  line-height: 100%;
+}
+
+
+h4 {
+  font-size: 112.5%;
+  line-height: 100%;
+}
+
+p {
+  margin-bottom: 1%;
+}
+
+ul {
+  margin-left: 1%;
+  list-style-type: square;
+}
+
+a {
+  text-decoration: none;
+  padding: 0 5px 3px;
+  
+  &:link, &:active, &:visited {
+    color: $lightest-color;
+    background-color: $mid-color;
+  }
+  
+  @include default-link-hover-style;
+  
+  &.remove-link-style {
+    padding: 0;
+    background-color: inherit;
+    
+    &:hover{
+      color: inherit;
+    }
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+strong {
+  font-weight: bold;
+}
+
+input, textarea {
+  color: #333;
+  background-color: $lightest-color;
+  border: 1px solid $mid-color;
+  font: 100% Helvetica, Arial, sans-serif;
+}
+
+textarea {
+  width: 95%;
+}
+
+input[type="text"] {
+  width: 60%;
+}
+
+input[type="submit"], button {
+  font-weight: bold;
+  color: $lightest-color;
+  background-color: $darkest-color;
+  border: 1px solid $darkest-color;
+}
+
+hr {
+  margin: 1% 0;
+}
+
+/* ==========================================================================
+   Module rules
+   ========================================================================== */
+
+.cta {
+  @extend h3;
+  display: inline-block;
+  margin: 1%;
+  padding: 5px 10px;
+  color: $lightest-color;
+}
+
+.thumb {
+    margin: 0 1% 1% 0;
+    border: 3px solid $mid-color;
+    
+    &:hover {
+      border: 3px solid $lightest-color;
+    }
+}
+
+/* ==========================================================================
+   State rules
+   ========================================================================== */
+  
+
+
+/* ==========================================================================
+   Layout Rules - General
+   ========================================================================== */
+
+.l-wrapper-reponsive {
+  position: relative;
+  width: 80%;
+  padding: 1% 10%;
+}
+
+.l-color-invert {
+  
+  color: $lightest-color;
+  background-color: $darkest-color;
+}
+
+.l-outdent {
+  position: relative;
+  left: -2%;
+}
+
+.l-superscript {
+  font-size: 80%;
+  position: relative;
+  top: -3px;
+  left: 1px;
+}
+
+.l-small-print {
+  font-size: 85%; 
+}
+
+.l-margin-reset {
+  margin: 0 !important;
+}
+
+.l-float-left {
+  float: left;
+}
+
+.l-float-right {
+  float: right;
+}
+
+.l-align-center {
+  text-align: center;
+}
+
+.l-no-wrap {
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   Layout Rules - Global Page Layout
+   ========================================================================== */
+
+#page {
+  
+  margin-top: 1%;
+  
+}
+
+header#header {
+  
+  &.web {
+    background-color: $web-section-color;
+  }
+
+  &.print {
+    background-color: $print-section-color;
+  }
+
+  &.identity {
+    background-color: $identity-section-color;
+  }
+
+  &.info {
+    background-color: $info-section-color;
+  }
+
+  &.blog {
+    background-color: $blog-section-color;
+  }
+  
+  h1, .region-header {
+    display: inline-block;
+  }
+  
+  ul.menu {
+    
+    display: inline-block;
+    
+    li {
+      display: inline;
+    }
+    
+    li:first-child {
+      display: none;
+    }
+    
+    ul.menu {
+      
+      li {
+        display: block;
+      }
+    }
+  }
+}
+
+nav#subnav {
+ 
+  // TO DO: Compass gradient background
+  
+  h2 {
+    
+  }
+  
+  a {
+    color: $main-color;
+    background-color: $lightest-color;
+    margin-right: 1%;
+     
+    &:hover {
+      color: $darkest-color;
+    }
+  }
+  
+} 
+
+#main {
+  
+  position: relative;
+  width: 100%; 
+}
+
+#content {
+  
+  margin: 1% 10%;
+}
+  
+
+footer#footer {
+  
+  width: 100%;
+  text-align: center;
+  padding: 1% 0;
+  margin-top: 2%;
+  
+  ul.menu {
+    
+    list-style-type: none;
+    margin-left: 5px;
+    margin-bottom: 1%;
+          
+    li {
+      margin-right: 1%;
+      display: inline;
+      
+      @include mobile-portrait-and-below {
+        margin: 0;
+        display: block;
+      }
+    }
+    
+    a {
+      font-weight: bold;
+      background-color: $mid-dark-color;
+      
+      @include default-link-hover-style;
+    }
+    
+    ul.menu {
+      
+      display: inline;
+      
+      @include mobile-portrait-and-below {
+        display: block;
+      }
+      
+      a {
+        font-weight: normal;
+      }
+      
+      li {
+        margin: 0;
+        
+        @include mobile-portrait-and-below {
+          display: inline;
+        }
+      }
+    }
+  }
+}
+
+/* ==========================================================================
+   Layout Rules - Front Page
+   ========================================================================== */
+
+/*
+  h3.home {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    color: $lightest-color;
+    margin-top: 0px;
+  }
+
+  .home_thumb {
+      float: left;
+      margin-right: 40px;
+      width: 125px;
+      height: 125px;
+      border: 3px solid $lightest-color;
+    }
+    
+    .home_thumb:hover {
+      border: 3px solid $darkest-color;
+    }
+    
+  .home_info {
+    float: left;
+    width: 350px;
+  }
+ */
+
+/* ==========================================================================
+   Layout Rules - View: Portfolio
+   ========================================================================== */
+
+/*
+  .section_info, .section_content {
+    float: left;
+  }
+
+  .section_info {
+    width: 150px;
+    margin-right: 25px;
+  }
+  
+    .section_info a:hover {
+      background-color: $main-color;
+    }
+    
+    .section_info h4 {
+      margin: 0px;
+    }
+  
+  .section_content {
+    width: 700px;
+  }
+  
+  .section_thumb_container {
+    float: left;
+    width: 125px;
+    height: 200px;
+    margin-left: 50px;
+    text-align: center;
+  }
+  
+    .section_thumb_container a:first-child {
+      padding: 0px;
+      background-color: $main-color;
+    }
+    
+    .section_thumb_container img {
+      border: 3px solid $lightest-color;
+    }
+    
+    .section_thumb_container img:hover {
+      border: 3px solid $darkest-color;
+    } 
+ */
+
+/* ==========================================================================
+   Layout Rules - Node Type: Portfolio Piece 
+   ========================================================================== */
+
+.node-portfolio-piece {
+   
+  .col-content {
+    float: left;
+    width: 70%;
+    text-align: center;
+  }
+
+  .col-info {
+    float: left;
+    width: 30%;
+  }
+  
+  .thumb {
+    width: 62px;
+    height: 62px;
+  }
+  
+  .field {
+    margin-top: 5%;
+  }
+  
+  .field-label {
+    // TO DO: Have this field output <h3>, and delete this block
+    @extend h3;
+  }
+  
+  
+  &.node-teaser {
+    
+    .field {
+      margin-top: 1%;
+    }
+  }
+  
+}

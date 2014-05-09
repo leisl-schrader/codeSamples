@@ -1,0 +1,519 @@
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/lib\/gems\/1\.9\.1\/gems\/compass-0\.12\.2\/frameworks\/compass\/stylesheets\/compass\/reset\/_utilities\.scss}line{font-family:\000035}}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, .cta, .node-portfolio-piece .field-label, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/lib\/gems\/1\.9\.1\/gems\/compass-0\.12\.2\/frameworks\/compass\/stylesheets\/compass\/reset\/_utilities\.scss}line{font-family:\0000322}}
+html {
+  line-height: 1;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/lib\/gems\/1\.9\.1\/gems\/compass-0\.12\.2\/frameworks\/compass\/stylesheets\/compass\/reset\/_utilities\.scss}line{font-family:\0000324}}
+ol, ul {
+  list-style: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/lib\/gems\/1\.9\.1\/gems\/compass-0\.12\.2\/frameworks\/compass\/stylesheets\/compass\/reset\/_utilities\.scss}line{font-family:\0000326}}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/lib\/gems\/1\.9\.1\/gems\/compass-0\.12\.2\/frameworks\/compass\/stylesheets\/compass\/reset\/_utilities\.scss}line{font-family:\0000328}}
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/lib\/gems\/1\.9\.1\/gems\/compass-0\.12\.2\/frameworks\/compass\/stylesheets\/compass\/reset\/_utilities\.scss}line{font-family:\0000330}}
+q, blockquote {
+  quotes: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/lib\/gems\/1\.9\.1\/gems\/compass-0\.12\.2\/frameworks\/compass\/stylesheets\/compass\/reset\/_utilities\.scss}line{font-family:\00003103}}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/lib\/gems\/1\.9\.1\/gems\/compass-0\.12\.2\/frameworks\/compass\/stylesheets\/compass\/reset\/_utilities\.scss}line{font-family:\0000332}}
+a img {
+  border: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/lib\/gems\/1\.9\.1\/gems\/compass-0\.12\.2\/frameworks\/compass\/stylesheets\/compass\/reset\/_utilities\.scss}line{font-family:\00003116}}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* Rule Order:
+ * Positioning 
+ * Display & Box Model 
+ * Font, Color, etc. */
+/* ==========================================================================
+   Sass variables 
+   ========================================================================== */
+/* Colors 
+   ========================================================================== */
+/* Media queries 
+ * Source: https://gist.github.com/anthonyshort/2028061
+   ========================================================================== */
+/* ==========================================================================
+   Sass mixins 
+   ========================================================================== */
+/* ==========================================================================
+   Sass functions 
+   ========================================================================== */
+/* ==========================================================================
+   Base Rules (includes typography)
+   ========================================================================== */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/amdev\/Share\/remix\/trunk\/dev\/sites\/all\/themes\/remixdesignV3\/sass\/_global\.scss}line{font-family:\00003189}}
+body {
+  font: 75%/150% Verdana, Helvetica, Arial, sans-serif;
+  color: black;
+  background-color: #bfbfbf;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/amdev\/Share\/remix\/trunk\/dev\/sites\/all\/themes\/remixdesignV3\/sass\/_global\.scss}line{font-family:\00003195}}
+h1 {
+  font-size: 300%;
+  line-height: 100%;
+  margin-bottom: 2%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/amdev\/Share\/remix\/trunk\/dev\/sites\/all\/themes\/remixdesignV3\/sass\/_global\.scss}line{font-family:\00003201}}
+h2 {
+  font-size: 200%;
+  line-height: 100%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/amdev\/Share\/remix\/trunk\/dev\/sites\/all\/themes\/remixdesignV3\/sass\/_global\.scss}line{font-family:\00003206}}
+h3, .cta, .node-portfolio-piece .field-label {
+  margin-bottom: 0.5%;
+  font-size: 150%;
+  line-height: 100%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/amdev\/Share\/remix\/trunk\/dev\/sites\/all\/themes\/remixdesignV3\/sass\/_global\.scss}line{font-family:\00003213}}
+h4 {
+  font-size: 112.5%;
+  line-height: 100%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/amdev\/Share\/remix\/trunk\/dev\/sites\/all\/themes\/remixdesignV3\/sass\/_global\.scss}line{font-family:\00003218}}
+p {
+  margin-bottom: 1%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/amdev\/Share\/remix\/trunk\/dev\/sites\/all\/themes\/remixdesignV3\/sass\/_global\.scss}line{font-family:\00003222}}
+ul {
+  margin-left: 1%;
+  list-style-type: square;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/amdev\/Share\/remix\/trunk\/dev\/sites\/all\/themes\/remixdesignV3\/sass\/_global\.scss}line{font-family:\00003227}}
+a {
+  text-decoration: none;
+  padding: 0 5px 3px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/amdev\/Share\/remix\/trunk\/dev\/sites\/all\/themes\/remixdesignV3\/sass\/_global\.scss}line{font-family:\00003231}}
+a:link, a:active, a:visited {
+  color: white;
+  background-color: #666666;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/amdev\/Share\/remix\/trunk\/dev\/sites\/all\/themes\/remixdesignV3\/sass\/_global\.scss}line{font-family:\00003171}}
+a:hover {
+  color: black;
+  background-color: white;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/amdev\/Share\/remix\/trunk\/dev\/sites\/all\/themes\/remixdesignV3\/sass\/_global\.scss}line{font-family:\00003238}}
+a.remove-link-style {
+  padding: 0;
+  background-color: inherit;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/amdev\/Share\/remix\/trunk\/dev\/sites\/all\/themes\/remixdesignV3\/sass\/_global\.scss}line{font-family:\00003242}}
+a.remove-link-style:hover {
+  color: inherit;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/amdev\/Share\/remix\/trunk\/dev\/sites\/all\/themes\/remixdesignV3\/sass\/_global\.scss}line{font-family:\00003248}}
+img {
+  max-width: 100%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/amdev\/Share\/remix\/trunk\/dev\/sites\/all\/themes\/remixdesignV3\/sass\/_global\.scss}line{font-family:\00003252}}
+strong {
+  font-weight: bold;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/amdev\/Share\/remix\/trunk\/dev\/sites\/all\/themes\/remixdesignV3\/sass\/_global\.scss}line{font-family:\00003256}}
+input, textarea {
+  color: #333;
+  background-color: white;
+  border: 1px solid #666666;
+  font: 100% Helvetica, Arial, sans-serif;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/amdev\/Share\/remix\/trunk\/dev\/sites\/all\/themes\/remixdesignV3\/sass\/_global\.scss}line{font-family:\00003263}}
+textarea {
+  width: 95%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/amdev\/Share\/remix\/trunk\/dev\/sites\/all\/themes\/remixdesignV3\/sass\/_global\.scss}line{font-family:\00003267}}
+input[type="text"] {
+  width: 60%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/amdev\/Share\/remix\/trunk\/dev\/sites\/all\/themes\/remixdesignV3\/sass\/_global\.scss}line{font-family:\00003271}}
+input[type="submit"], button {
+  font-weight: bold;
+  color: white;
+  background-color: black;
+  border: 1px solid black;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/amdev\/Share\/remix\/trunk\/dev\/sites\/all\/themes\/remixdesignV3\/sass\/_global\.scss}line{font-family:\00003278}}
+hr {
+  margin: 1% 0;
+}
+
+/* ==========================================================================
+   Module rules
+   ========================================================================== */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/amdev\/Share\/remix\/trunk\/dev\/sites\/all\/themes\/remixdesignV3\/sass\/_global\.scss}line{font-family:\00003286}}
+.cta {
+  display: inline-block;
+  margin: 1%;
+  padding: 5px 10px;
+  color: white;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/amdev\/Share\/remix\/trunk\/dev\/sites\/all\/themes\/remixdesignV3\/sass\/_global\.scss}line{font-family:\00003294}}
+.thumb {
+  margin: 0 1% 1% 0;
+  border: 3px solid #666666;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/amdev\/Share\/remix\/trunk\/dev\/sites\/all\/themes\/remixdesignV3\/sass\/_global\.scss}line{font-family:\00003298}}
+.thumb:hover {
+  border: 3px solid white;
+}
+
+/* ==========================================================================
+   State rules
+   ========================================================================== */
+/* ==========================================================================
+   Layout Rules - General
+   ========================================================================== */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/amdev\/Share\/remix\/trunk\/dev\/sites\/all\/themes\/remixdesignV3\/sass\/_global\.scss}line{font-family:\00003313}}
+.l-wrapper-reponsive {
+  position: relative;
+  width: 80%;
+  padding: 1% 10%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/amdev\/Share\/remix\/trunk\/dev\/sites\/all\/themes\/remixdesignV3\/sass\/_global\.scss}line{font-family:\00003319}}
+.l-color-invert {
+  color: white;
+  background-color: black;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/amdev\/Share\/remix\/trunk\/dev\/sites\/all\/themes\/remixdesignV3\/sass\/_global\.scss}line{font-family:\00003325}}
+.l-outdent {
+  position: relative;
+  left: -2%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/amdev\/Share\/remix\/trunk\/dev\/sites\/all\/themes\/remixdesignV3\/sass\/_global\.scss}line{font-family:\00003330}}
+.l-superscript {
+  font-size: 80%;
+  position: relative;
+  top: -3px;
+  left: 1px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/amdev\/Share\/remix\/trunk\/dev\/sites\/all\/themes\/remixdesignV3\/sass\/_global\.scss}line{font-family:\00003337}}
+.l-small-print {
+  font-size: 85%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/amdev\/Share\/remix\/trunk\/dev\/sites\/all\/themes\/remixdesignV3\/sass\/_global\.scss}line{font-family:\00003341}}
+.l-margin-reset {
+  margin: 0 !important;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/amdev\/Share\/remix\/trunk\/dev\/sites\/all\/themes\/remixdesignV3\/sass\/_global\.scss}line{font-family:\00003345}}
+.l-float-left {
+  float: left;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/amdev\/Share\/remix\/trunk\/dev\/sites\/all\/themes\/remixdesignV3\/sass\/_global\.scss}line{font-family:\00003349}}
+.l-float-right {
+  float: right;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/amdev\/Share\/remix\/trunk\/dev\/sites\/all\/themes\/remixdesignV3\/sass\/_global\.scss}line{font-family:\00003353}}
+.l-align-center {
+  text-align: center;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/amdev\/Share\/remix\/trunk\/dev\/sites\/all\/themes\/remixdesignV3\/sass\/_global\.scss}line{font-family:\00003357}}
+.l-no-wrap {
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   Layout Rules - Global Page Layout
+   ========================================================================== */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/amdev\/Share\/remix\/trunk\/dev\/sites\/all\/themes\/remixdesignV3\/sass\/_global\.scss}line{font-family:\00003365}}
+#page {
+  margin-top: 1%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/amdev\/Share\/remix\/trunk\/dev\/sites\/all\/themes\/remixdesignV3\/sass\/_global\.scss}line{font-family:\00003373}}
+header#header.web {
+  background-color: #0015ff;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/amdev\/Share\/remix\/trunk\/dev\/sites\/all\/themes\/remixdesignV3\/sass\/_global\.scss}line{font-family:\00003377}}
+header#header.print {
+  background-color: #c8252c;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/amdev\/Share\/remix\/trunk\/dev\/sites\/all\/themes\/remixdesignV3\/sass\/_global\.scss}line{font-family:\00003381}}
+header#header.identity {
+  background-color: #4d5c87;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/amdev\/Share\/remix\/trunk\/dev\/sites\/all\/themes\/remixdesignV3\/sass\/_global\.scss}line{font-family:\00003385}}
+header#header.info {
+  background-color: #008202;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/amdev\/Share\/remix\/trunk\/dev\/sites\/all\/themes\/remixdesignV3\/sass\/_global\.scss}line{font-family:\00003389}}
+header#header.blog {
+  background-color: #fff8c5;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/amdev\/Share\/remix\/trunk\/dev\/sites\/all\/themes\/remixdesignV3\/sass\/_global\.scss}line{font-family:\00003393}}
+header#header h1, header#header .region-header {
+  display: inline-block;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/amdev\/Share\/remix\/trunk\/dev\/sites\/all\/themes\/remixdesignV3\/sass\/_global\.scss}line{font-family:\00003397}}
+header#header ul.menu {
+  display: inline-block;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/amdev\/Share\/remix\/trunk\/dev\/sites\/all\/themes\/remixdesignV3\/sass\/_global\.scss}line{font-family:\00003401}}
+header#header ul.menu li {
+  display: inline;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/amdev\/Share\/remix\/trunk\/dev\/sites\/all\/themes\/remixdesignV3\/sass\/_global\.scss}line{font-family:\00003405}}
+header#header ul.menu li:first-child {
+  display: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/amdev\/Share\/remix\/trunk\/dev\/sites\/all\/themes\/remixdesignV3\/sass\/_global\.scss}line{font-family:\00003411}}
+header#header ul.menu ul.menu li {
+  display: block;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/amdev\/Share\/remix\/trunk\/dev\/sites\/all\/themes\/remixdesignV3\/sass\/_global\.scss}line{font-family:\00003426}}
+nav#subnav a {
+  color: #bfbfbf;
+  background-color: white;
+  margin-right: 1%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/amdev\/Share\/remix\/trunk\/dev\/sites\/all\/themes\/remixdesignV3\/sass\/_global\.scss}line{font-family:\00003431}}
+nav#subnav a:hover {
+  color: black;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/amdev\/Share\/remix\/trunk\/dev\/sites\/all\/themes\/remixdesignV3\/sass\/_global\.scss}line{font-family:\00003438}}
+#main {
+  position: relative;
+  width: 100%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/amdev\/Share\/remix\/trunk\/dev\/sites\/all\/themes\/remixdesignV3\/sass\/_global\.scss}line{font-family:\00003444}}
+#content {
+  margin: 1% 10%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/amdev\/Share\/remix\/trunk\/dev\/sites\/all\/themes\/remixdesignV3\/sass\/_global\.scss}line{font-family:\00003450}}
+footer#footer {
+  width: 100%;
+  text-align: center;
+  padding: 1% 0;
+  margin-top: 2%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/amdev\/Share\/remix\/trunk\/dev\/sites\/all\/themes\/remixdesignV3\/sass\/_global\.scss}line{font-family:\00003457}}
+footer#footer ul.menu {
+  list-style-type: none;
+  margin-left: 5px;
+  margin-bottom: 1%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/amdev\/Share\/remix\/trunk\/dev\/sites\/all\/themes\/remixdesignV3\/sass\/_global\.scss}line{font-family:\00003463}}
+footer#footer ul.menu li {
+  margin-right: 1%;
+  display: inline;
+}
+@media (max-width: 320px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/amdev\/Share\/remix\/trunk\/dev\/sites\/all\/themes\/remixdesignV3\/sass\/_global\.scss}line{font-family:\00003463}}
+  footer#footer ul.menu li {
+    margin: 0;
+    display: block;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/amdev\/Share\/remix\/trunk\/dev\/sites\/all\/themes\/remixdesignV3\/sass\/_global\.scss}line{font-family:\00003473}}
+footer#footer ul.menu a {
+  font-weight: bold;
+  background-color: #333333;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/amdev\/Share\/remix\/trunk\/dev\/sites\/all\/themes\/remixdesignV3\/sass\/_global\.scss}line{font-family:\00003171}}
+footer#footer ul.menu a:hover {
+  color: black;
+  background-color: white;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/amdev\/Share\/remix\/trunk\/dev\/sites\/all\/themes\/remixdesignV3\/sass\/_global\.scss}line{font-family:\00003480}}
+footer#footer ul.menu ul.menu {
+  display: inline;
+}
+@media (max-width: 320px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/amdev\/Share\/remix\/trunk\/dev\/sites\/all\/themes\/remixdesignV3\/sass\/_global\.scss}line{font-family:\00003480}}
+  footer#footer ul.menu ul.menu {
+    display: block;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/amdev\/Share\/remix\/trunk\/dev\/sites\/all\/themes\/remixdesignV3\/sass\/_global\.scss}line{font-family:\00003488}}
+footer#footer ul.menu ul.menu a {
+  font-weight: normal;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/amdev\/Share\/remix\/trunk\/dev\/sites\/all\/themes\/remixdesignV3\/sass\/_global\.scss}line{font-family:\00003492}}
+footer#footer ul.menu ul.menu li {
+  margin: 0;
+}
+@media (max-width: 320px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/amdev\/Share\/remix\/trunk\/dev\/sites\/all\/themes\/remixdesignV3\/sass\/_global\.scss}line{font-family:\00003492}}
+  footer#footer ul.menu ul.menu li {
+    display: inline;
+  }
+}
+
+/* ==========================================================================
+   Layout Rules - Front Page
+   ========================================================================== */
+/*
+  h3.home {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    color: $lightest-color;
+    margin-top: 0px;
+  }
+
+  .home_thumb {
+      float: left;
+      margin-right: 40px;
+      width: 125px;
+      height: 125px;
+      border: 3px solid $lightest-color;
+    }
+    
+    .home_thumb:hover {
+      border: 3px solid $darkest-color;
+    }
+    
+  .home_info {
+    float: left;
+    width: 350px;
+  }
+ */
+/* ==========================================================================
+   Layout Rules - View: Portfolio
+   ========================================================================== */
+/*
+  .section_info, .section_content {
+    float: left;
+  }
+
+  .section_info {
+    width: 150px;
+    margin-right: 25px;
+  }
+  
+    .section_info a:hover {
+      background-color: $main-color;
+    }
+    
+    .section_info h4 {
+      margin: 0px;
+    }
+  
+  .section_content {
+    width: 700px;
+  }
+  
+  .section_thumb_container {
+    float: left;
+    width: 125px;
+    height: 200px;
+    margin-left: 50px;
+    text-align: center;
+  }
+  
+    .section_thumb_container a:first-child {
+      padding: 0px;
+      background-color: $main-color;
+    }
+    
+    .section_thumb_container img {
+      border: 3px solid $lightest-color;
+    }
+    
+    .section_thumb_container img:hover {
+      border: 3px solid $darkest-color;
+    } 
+ */
+/* ==========================================================================
+   Layout Rules - Node Type: Portfolio Piece 
+   ========================================================================== */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/amdev\/Share\/remix\/trunk\/dev\/sites\/all\/themes\/remixdesignV3\/sass\/_global\.scss}line{font-family:\00003588}}
+.node-portfolio-piece .col-content {
+  float: left;
+  width: 70%;
+  text-align: center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/amdev\/Share\/remix\/trunk\/dev\/sites\/all\/themes\/remixdesignV3\/sass\/_global\.scss}line{font-family:\00003594}}
+.node-portfolio-piece .col-info {
+  float: left;
+  width: 30%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/amdev\/Share\/remix\/trunk\/dev\/sites\/all\/themes\/remixdesignV3\/sass\/_global\.scss}line{font-family:\00003599}}
+.node-portfolio-piece .thumb {
+  width: 62px;
+  height: 62px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/amdev\/Share\/remix\/trunk\/dev\/sites\/all\/themes\/remixdesignV3\/sass\/_global\.scss}line{font-family:\00003604}}
+.node-portfolio-piece .field {
+  margin-top: 5%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/amdev\/Share\/remix\/trunk\/dev\/sites\/all\/themes\/remixdesignV3\/sass\/_global\.scss}line{font-family:\00003616}}
+.node-portfolio-piece.node-teaser .field {
+  margin-top: 1%;
+}
+
+/* Welcome to Compass. Use this file to write IE specific override styles.
+ * Import this file using the following HTML or equivalent:
+ * <!--[if IE]>
+ *   <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+ * <![endif]--> */

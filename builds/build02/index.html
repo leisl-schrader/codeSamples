@@ -22,72 +22,232 @@
 
   <link rel="stylesheet" href="_css/normalize.css">
 	<link rel="stylesheet" href="_css/html5bp.css">
-	<link rel="stylesheet" href="_plugins/mediaelement/build/mediaelementplayer.css">
 	<link rel="stylesheet" href="_css/style.css">
-	
+
   <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
 
   <!-- All JavaScript at the bottom, except this Modernizr build.
        Modernizr enables HTML5 elements & feature detects for optimal performance.
        Create your own custom Modernizr build: www.modernizr.com/download/ -->
-  <script src="_js/vendor/modernizr.custom.js"></script>
+  <script src="_js/libs/modernizr-2.5.3.min.js"></script>
 </head>
-<body>
+<body id="container">
   <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
        chromium.org/developers/how-tos/chrome-frame-getting-started -->
   <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
-  <header>
-
-  </header>
 	
-  <div role="main">
+	<div class="clear-after">
 	
-		<div id="phrase">
-			
-			<div id="phraseCTA">
-			
-				<p>
-					Click mistletoe to shuffle
-				</p>
+		<header>
+		
+			<a href="index.html">
+				<img src="_img/global/logo.png" alt="">
+			</a>
+		
+			<nav id="primary">
+					
+					<ul>
+					
+						<li>
+								<a id="primaryNav-01" href="products.html">VIEW Products</a>
+						</li>
+						
+						<li>
+								<a id="primaryNav-02" href="styleHowTos.html">STYLE HOW-TO'S</a>
+						</li>
+						
+						<li>
+								<a id="primaryNav-03" href="findAStore.html">find a store</a>
+						</li>
+						
+						<li>
+								<a id="primaryNav-04" href="">SHOP ONLINE</a>
+						</li>
+						
+					</ul>
+					
+			</nav>
+	
+		</header>
+		
+		<nav id="products">
+		
+			<ul>
+					
+						<li class="clear-after">
+								<a href="products.html">
+								
+									<img src="_img/global/nav_products_01.png" class="float-right" alt="">
+									
+									Let's Jam<sup>&reg;</sup><br>
+									Custard
+								</a>
+								
+						</li>
+						
+						<li>
+								<a href="products.html">
+								
+									<img src="_img/global/nav_products_02.png" class="float-right" alt="">
+									
+									Let's Jam<sup>&reg;</sup><br>
+									Lite Hold Gel
+								</a>
+						</li>
+						
+						<li>
+								<a href="products.html">
+								
+									<img src="_img/global/nav_products_03.png" class="float-right" alt="">
+									
+									Let's Jam<sup>&reg;</sup><br>
+									Regular Hold Gel
+								</a>
+						</li>
+						
+						<li>
+								<a href="products.html">
+								
+									<img src="_img/global/nav_products_04.png" class="float-right" alt="">
+									
+									Let's Jam<sup>&reg;</sup><br>
+									Extra Hold Gel
+								</a>
+						</li>
+						
+						<li>
+								<a href="products.html">
+								
+									<img src="_img/global/nav_products_05.png" class="float-right" alt="">
+									
+									Let's Jam<sup>&reg;</sup><br>
+									Mega Hold Gel
+								</a>
+						</li>
+						
+					</ul>
+		
+		</nav>
+		
+		<nav id="shopOnline">
+		
+			<div id="shopOnline_content">
+				<div class="clear-after">
+					<img src="_img/global/nav_shopOnline_logo.png" alt="">
+					
+					<a href="">Shop Now</a>
+					
+					<em>The place to find</em><br>
+					<span class="caps">Let's Jam</span>
+					
+				</div>
+			</div>
+		
+		</nav>
+		
+		<div role="main" id="content">
+		
+				<div id="contentTop" class="clear-after">
+		
+					<section class="sm">
+					
+						<img src="_img/home/callout_01.png" alt="">
+						
+					</section>
+					
+					<section class="med clear-after">
+						
+						<img src="_img/home/productPhoto_01.png" class="float-left" alt="">
+					
+						<div class="text">
+						
+							<h3><img src="_img/home/callout_new.png" alt=""></h3>
+						
+							<h2>Let's Jam<sup>&reg;</sup> Custard</h2>
+							<h3>for flexible, all-day hold</h3>
+							
+							<p>
+								Our new flexible hold cream gel lets you easily style and re-style your look, with up to <strong>3X more conditioning power.</strong><br>
+								<em>NO alcohol &#8226; NO mineral hold &#8226; NO petrolatum</em>
+							</p>
+							
+							<a class="cta-block" href="products.html">Learn More &gt;</a>
+							
+						</div>
+					
+					</section>
 				
-			</div>
-		
-			<p id="phraseText">default text</p>
-		
-		</div>
-		
-		<div id="controls" class="clear-after">
-		
-			<div class="float-left">
-				<span id="makeYourOwnBack">
-					<img src="_img/back.png"> go back
-				</span>
-			</div>
-			
-			<button id="makeYourOwn">make<br>your own</button>
-			
-			<!--<button id="makeYourOwnBack" class="sm">go back</button>-->
-			
-			<button id="share" class="sm st_sharethis_custom" st_url="#" st_title="Digital Mistletoe">share</button>
-			
-			<div class="float-right">
-				<audio id="musicPlayer" src="_media/digibells.mp3" type="audio/mp3" controls="controls">		
-				</audio>
-			</div>
-			
-		</div>
+				</div>
+				
+				<div id="contentMid">
+				
+					<section class="lg clear-after">
+					
+						<img src="_img/home/modelPhoto_01.jpg" class="float-left" alt="">
+					
+						<div class="float-left clear-after">
+					
+							<img src="_img/home/modelPhoto_02.jpg" class="float-left" alt="">
+							
+							<img src="_img/home/modelPhoto_03.jpg" alt="">
+							
+							<br>
+							
+							<img src="_img/home/modelPhoto_04.jpg" class="float-left" alt="">
+							
+							<img src="_img/home/modelPhoto_05.jpg" class="float-left" alt="">
+							
+							<img src="_img/home/modelPhoto_06.jpg" alt="">
+						
+						</div>
+					
+						<div class="text">
+					
+							<h2>STYLE HOW-TO'S</h2>
+							<h3>It's easy to define your style.</h3>
+								
+							<p>
+								Just follow these helpful how-to's in our <a class="cta-inline" href="styleHowTos.html">style gallery &gt;</a>
+							</p>
+						
+						</div>
+					
+					</section>
+					
+				</div>
+				
+				<div id="contentBtm" class="clear-after">
+				
+					<section class="sm">
+					
+						<h2><span class="tagCount">24</span> TAGS <em>in our style gallery</em></h2>
+						
+						Natural, <strong>Spiked</strong>, African American Hair, Curly Hair, Straight Black Hair, Bold, Sexy, Confident, Smooth, Wavy, Sophisticated, <strong>Contemporary</strong>, Retro Hair Style, Short Hair, Long Hair, <strong>Edgy</strong>, Classic, Simple, <strong>Up-do</strong>, Relaxed, Casual, Kinky, Black Hairstyles, Soft
+						
+					</section>
+					
+					<section class="med clear-after">
+					
+						<img src="_img/home/modelPhoto_07.jpg" class="float-left" alt="">
+						
+						<div class="text">
+						
+							<h2>Let's Jam<sup>&reg;</sup> FANS</h2>
+							<h3>Our products. Your styles.</h3>
+							
+							Show off your good looks and be part of our look book! Tag your photos with #LetsJamFan
+						
+						</div>
+							
+					</section>
+				
+				</div>
 
-  </div>
+		</div>
+	
+	</div>
 	
   <footer>
-	
-		<img src="_img/dmLogo.png">
-		
-		<img src="_img/footerText.png" alt="Share some. Get some. Find the perfect sentiment to share with that special someone(s).">
-	
-		<a href="http://www.scopemouthwash.com">
-			<img src="_img/scopeLogo.png">
-		</a>
 
   </footer>
 
@@ -95,18 +255,12 @@
   <!-- JavaScript at the bottom for fast page loading -->
 
   <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script src="_js/vendor/jquery-1.8.3.min.js"><\/script>')</script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="_js/libs/jquery-1.4.2.min.js"><\/script>')</script>
+
+  <!-- scripts concatenated and minified via build script -->
   <script src="_js/plugins.js"></script>
-	<script src="_plugins/mediaelement/build/mediaelement-and-player.min.js"></script>
-  <script src="_js/main.js"></script>
-	
-	<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-	<script type="text/javascript">
-		stLight.options({publisher: "adba2cee-6802-4b9b-a559-38c5f6199136", onhover: false, shorten:false});
-	</script>
-	
-	<script src="_js/main2.js"></script>
+  <script src="_js/script.js"></script>
   <!-- end scripts -->
 
 </body>
